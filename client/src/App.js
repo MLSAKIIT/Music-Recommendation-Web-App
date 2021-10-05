@@ -34,7 +34,6 @@ const App = () => {
           <Route exact path="/register" component={register} />
           <Route exact path="/todo" component={Todo} />
         </Switch>
-        <a style={{position: 'absolute', bottom: '5%', left: '1%'}} href='https://github.com/sayantan1821/To-Do-List-React'><VscGithub size='40'/></a>
       </BrowserRouter>
     </Provider>
   );
