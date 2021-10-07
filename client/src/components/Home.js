@@ -15,15 +15,15 @@ const Home = () => {
   const classes = useStyles();
   return (
     <div className='home-content'>
-      <h1 style={{fontSize: '5em'}}>Welcome</h1>
+      <h1 style={{fontSize: '5em', color: 'skyblue'}}>Welcome</h1>
       <div className={classes.root}>
         <Link to="/login">
-          <Button variant="contained" style={{backgroundColor: '#38a1f3', color: 'white'}}>
+          <Button variant="contained" style={{backgroundColor: 'red', color: 'white'}}>
             Log In
           </Button>
         </Link>
         <Link to="/register">
-          <Button variant="contained" style={{backgroundColor: '#38a1f3', color: 'white'}}>
+          <Button variant="contained" style={{backgroundColor: 'red', color: 'white'}}>
             Sign Up
           </Button>
         </Link>

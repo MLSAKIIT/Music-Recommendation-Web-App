@@ -319,7 +319,7 @@
   }
   
   .form .social-input i.fa-twitter {
-    color: #38a1f3;
+    color: red;
   }
   .form .social-input i.fa-facebook {
     color: #3b5998;
@@ -623,7 +623,7 @@
   }
   
   .MuiCheckbox-colorPrimary.Mui-checked {
-    color: #38a1f3 !important;
+    color: red !important;
   }
 
   .music-container {
