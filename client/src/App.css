@@ -625,3 +625,10 @@
   .MuiCheckbox-colorPrimary.Mui-checked {
     color: #38a1f3 !important;
   }
+
+  .music-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

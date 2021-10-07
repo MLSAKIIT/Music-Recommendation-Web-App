@@ -6,7 +6,7 @@ import Alert from "./layout/Alert";
 import { Switch, Route, BrowserRouter, Link } from "react-router-dom";
 // import { VscGithub } from "react-icons/vsc";
 import { FaHome } from "react-icons/fa";
-
+import './App.css'
 
 import { Provider } from "react-redux";
 import store from "./store";
