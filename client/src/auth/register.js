@@ -33,7 +33,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <div style={{width: '50vw', margin: 'auto'}}>
-      <h1 className="large text-primary">Sign Up</h1>
+      <h1 className="large ">Sign Up</h1>
       <p className="lead">
         <i className="fas fa-user" /> Create Your Account
       </p>
