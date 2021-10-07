@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Todo from "./Todo";
+import Music from './components/Music';
 import login from "./auth/login";
 import register from "./auth/register";
 import Alert from "./layout/Alert";
@@ -32,7 +32,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={login} />
           <Route exact path="/register" component={register} />
-          <Route exact path="/todo" component={Todo} />
+          <Route exact path="/music" component={Music} />
         </Switch>
       </BrowserRouter>
     </Provider>
