@@ -4,7 +4,7 @@ import login from "./auth/login";
 import register from "./auth/register";
 import Alert from "./layout/Alert";
 import { Switch, Route, BrowserRouter, Link } from "react-router-dom";
-import { VscGithub } from "react-icons/vsc";
+// import { VscGithub } from "react-icons/vsc";
 import { FaHome } from "react-icons/fa";
 
 
