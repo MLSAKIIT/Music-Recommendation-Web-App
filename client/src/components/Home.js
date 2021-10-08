@@ -18,12 +18,12 @@ const Home = () => {
       <h1 style={{fontSize: '5em', color: 'skyblue'}}>Welcome</h1>
       <div className={classes.root}>
         <Link to="/login">
-          <Button variant="contained" style={{backgroundColor: 'red', color: 'white'}}>
+          <Button variant="contained" style={{backgroundColor: '#ff00007d', color: 'white'}}>
             Log In
           </Button>
         </Link>
         <Link to="/register">
-          <Button variant="contained" style={{backgroundColor: 'red', color: 'white'}}>
+          <Button variant="contained" style={{backgroundColor: '#ff00007d', color: 'white'}}>
             Sign Up
           </Button>
         </Link>
