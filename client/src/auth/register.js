@@ -74,7 +74,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn" style={{backgroundColor: 'skyblue'}} value="Register" />
+        <input type="submit" className="btn" style={{backgroundColor: '#79d0f3', color: 'white', borderRadius: '35px'}} value="Register" />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login" className=''>Sign In</Link>

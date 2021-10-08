@@ -51,7 +51,7 @@ const Login = ({ login, isAuthenticated }) => {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Login" />
+        <input type="submit" className="btn " style={{backgroundColor: '#79d0f3', color: 'white', borderRadius: '35px'}} value="Login" />
       </form>
       <p className="my-1">
         Don't have an account? <Link to="/register">Sign Up</Link>
