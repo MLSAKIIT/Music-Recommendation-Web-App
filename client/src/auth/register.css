@@ -1,22 +1,101 @@
-.form .form-group{
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+:root {
+  --font1: "Birthstone", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  height: 100vh;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  background-color: #1d3536;
+}
+
+.box-left {
+  width: 43%;
+  padding: 30px;
+}
+
+.box-right {
+  width: 57%;
+  padding: 8px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.register-box {
+  margin: 20px;
+  margin-top: 30px;
+  width: 88%;
+  margin: 33px auto;
+}
+.large,
+.lead {
+  color: white;
+}
+.form {
+  margin: 5px;
+}
+.form-group {
+  margin: 5px;
+  padding: 3px 0;
+}
+.form .form-group input {
+  border: none;
+  background-color: #1d3536;
+  outline: none;
+  border-bottom: 1px solid grey;
+  padding: 5px;
+  color: white;
+}
+.btn {
+  margin: 5px 0px;
+  border-radius: 110px;
+}
+@media only screen and (max-width: 807px) {
+  .box {
+    height: 100vh
+  }
+}
+@media only screen and (max-width: 790px) {
+  
+  .register-box {
     width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    margin: 15px 0;
-    color: #fff;
-    border: none;
-    border-bottom: 1.4px solid grey;
-    outline: none;
-    resize: none;
-    background-color: #1d3536;
+    margin: 0px;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .box-left{
+    width: 47%;
+  }
+  .box-right{
+    width: 53%;
+  }
 }
-.form .form-group input{
-    background-color: #1d3536;
-    border: none;
-    outline: none;
-    resize: none;
-    color: #fff;
+@media only screen and (max-width: 600px) {
+  .box {
+    flex-direction: column;
+    height: 100%;
+  }
+  .box-left {
+    width: 100%;
+  }
+  .box-right {
+    width: 100%;
+    height: 500px;
+  }
 }
-.btn{
-    margin: 5px 0px;
+@media (max-width: 380px) {
+  .box-left {
+    padding: 5px;
+    padding-top: 10px;
+  }
+  .register-box {
+    margin-top: 60px;
+    width: 90%;
+    
+  }
 }

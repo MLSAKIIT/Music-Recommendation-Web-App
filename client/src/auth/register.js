@@ -35,15 +35,16 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div style={{ display: 'flex', margin: '0px', backgroundColor: '#1d3536' }}>
-      <div style={{ width: '40%', margin: '50px', padding: '8px' }}>
-        <h1 className="large" style={{color: 'white'}} >Sign Up</h1>
-        <p className="lead" style={{color: 'white'}}>
+    <div className="box" >
+      <div className="box-left">
+        <div className="register-box">
+        <h1 className="large" > Sign Up</h1>
+        <p className="lead" >
           <i className="fas fa-user" /> Create Your Account
         </p>
         <form className="form" onSubmit={onSubmit}>
-          <div className="form-group">
-            <input
+          <div className="form-group" >
+            <input  style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
               type="text"
               placeholder="Name"
               name="name"
@@ -52,7 +53,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             />
           </div>
           <div className="form-group">
-            <input
+            <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
               type="email"
               placeholder="Email Address"
               name="email"
@@ -61,7 +62,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             />
           </div>
           <div className="form-group">
-            <input
+            <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
               type="password"
               placeholder="Password"
               name="password"
@@ -70,7 +71,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             />
           </div>
           <div className="form-group">
-            <input
+            <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
               type="password"
               placeholder="Confirm Password"
               name="password2"
@@ -78,18 +79,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               onChange={onChange}
             />
           </div>
-          <input type="submit" className="btn" style={{ backgroundColor: '#d4373e', color: 'white', borderRadius: '35px' }} value="Register" />
+          <input type="submit" className="btn" style={{ backgroundColor: '#d4373e', color: 'white' }} value="Register" />
         </form>
-        <p className="my-1" style={{color: 'white'}}>
-          Already have an account? <Link to="/login" className='' style={{ color: '#d4373e'}}>Sign In</Link>
+        <p className="my-1" style={{ color: 'white' }}>
+          Already have an account? <Link to="/login" className='' style={{ color: '#d4373e' }}>Sign In</Link>
         </p>
+        </div>
       </div>
-      <div style={{
-        height: '100vh', width: '60%', padding: '8px', backgroundImage: `url(${bgImage})`, backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-      }}>
-
+      <div className="box-right" style={{backgroundImage: `url(${bgImage})` }}>
       </div>
     </div>
   );
