@@ -3,6 +3,9 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../actions/auth';
+import bgImage from './register.jpg';
+import './register.css'
+import './login.css'
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -25,14 +28,16 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <div style={{width: '50vw', margin: 'auto'}}>
-      <h1 className="large ">Sign In</h1>
+    <div className="box">
+    <div className="box-left">
+      <div className="login-box">
+      <h1 className="large">Sign In</h1>
       <p className="lead">
         <i className="fas fa-user" /> Sign Into Your Account
       </p>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
-          <input
+          <input  style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
             type="email"
             placeholder="Email Address"
             name="email"
@@ -42,7 +47,7 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <div className="form-group">
-          <input
+          <input  style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
             type="password"
             placeholder="Password"
             name="password"
@@ -51,11 +56,15 @@ const Login = ({ login, isAuthenticated }) => {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn " style={{backgroundColor: '#79d0f3', color: 'white', borderRadius: '35px'}} value="Login" />
+        <input type="submit" className="btn"n style={{ backgroundColor: '#d4373e', color: 'white' }}  value="Login" />
       </form>
-      <p className="my-1">
-        Don't have an account? <Link to="/register">Sign Up</Link>
+      <p className="my-1" style={{color: 'white'}}>
+        Don't have an account? <Link to="/register"  style={{color: '#d4373e'}}>Sign Up</Link>
       </p>
+      </div>
+    </div>
+    <div className="box-right" style={{backgroundImage: `url(${bgImage})` }}>
+      </div>
     </div>
   );
 };
