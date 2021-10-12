@@ -13,6 +13,7 @@ import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import Home from './components/Home';
+import artists from './components/Artists';
 
 if(localStorage.token) {
   setAuthToken(localStorage.token)
@@ -29,9 +30,9 @@ const App = () => {
       <Link style={{position: 'absolute', left: '1%'}} to='/'><FaHome size='40' /></Link>
       <Alert />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={login} />
+          <Route exact path="/" component={login} />
           <Route exact path="/register" component={register} />
+          <Route exact path="/artists" component={artists} />
           <Route exact path="/music" component={Music} />
         </Switch>
       </BrowserRouter>

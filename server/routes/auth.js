@@ -18,7 +18,7 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
-//Authenticate user and get token
+//Authenticate user and get token (login) 
 router.post(
     '/',
     [
