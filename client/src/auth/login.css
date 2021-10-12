@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #d4373e;
+}
+.login-box {
+    margin: 55px auto;
+    width: 88%;
+}

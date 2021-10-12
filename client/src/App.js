@@ -27,7 +27,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <Link style={{position: 'absolute', left: '1%'}} to='/'><FaHome size='40' /></Link>
+      <Link style={{position: 'absolute', left: '1%', top: '1%', color: 'grey', opacity: '0.4'}} to='/'><FaHome size='40' /></Link>
       <Alert />
         <Switch>
           <Route exact path="/" component={login} />
