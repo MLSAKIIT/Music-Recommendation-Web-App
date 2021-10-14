@@ -1,39 +1,59 @@
+/* eslint-disable array-callback-return */
+import React, { useState } from "react";
+import artistsName from "./../data/artists"
+import Button from "./ArtistsButton";
+import './ArtistsButton.css'
+import ArtistsSendData from './ArtistsSendData';
 
-import React from "react";
-import artists from "../data/sample-artists";
-import EntryArtists from "./EntryArtists";
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography from '@material-ui/core/Typography'
+function Artists() {
+    const[searchTerm,setSearchTerm]=useState('');
+  const [AR, setAR] = useState([]);
+  const onclickHandler = (id, active) => {
+    if (active) {
+      setAR((prevState) => [...new Set([ ...prevState,id])]);
+    } else {
+      setAR((prevState) => {
+        return prevState.filter((i) => i !== id);
+      });
+    }
+  };
 
+            let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
+  {
+      if(searchTerm==="")
+      return ar;
+      else if(ar.artists.toLowerCase().includes(searchTerm.toLowerCase()))
+      {
+          return ar;
+      }
 
-function createEntry(artistsTerm)
-{
-return(
-    
-    <Grid item xs={2} sm={4} md={4} key={artistsTerm.id}>
-    <EntryArtists key={artistsTerm.id} name={artistsTerm.artists} />
-    </Grid>
-)
-}
+  });
+  let content = an.map((artist) => (
+    <Button
+      onclick={onclickHandler}
+      title={artist.artists}
+      id={artist.id}
+      key={artist.id}
+    />
+  ));
 
-
-function Artists()
-{
+  console.log(AR);
+  return (
+    <div  >
+        <h1 className="heading" >CHOOSE YOUR FAVOURITE ARTISTS 
+        <ArtistsSendData data={AR} />
+       </h1>
+       
+        <div className="searchbtn">
+            
+        <input type="text" name="search" placeholder="Search.." onChange={(event)=>{
+          setSearchTerm(event.target.value);  
+        }}/>
+       </div>
+        <div>{content}</div>
   
-
-return( 
-  <div style={{padding:"30px"}}>
-<Typography align="center" variant="h4" style={{padding:"15px"}}>Choose your favourite Artists</Typography>
-
-    <Box sx={{ flexGrow: 1 }}>
- <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-  {artists.map(createEntry)}
-  </Grid>
-    </Box>
     </div>
-
-)    
+  );
 }
 
 export default Artists;
