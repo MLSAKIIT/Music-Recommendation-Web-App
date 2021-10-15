@@ -65,7 +65,7 @@ import { logout } from '../../actions/auth';
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4" >
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark " style={{height: '200px'}}>
         <div className="container">
           <Link className="navbar-brand" to="/">
             Mu-Seak
@@ -80,14 +80,7 @@ import { logout } from '../../actions/auth';
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/ok45">
-                  {' '}
-                  Developers
-                </Link>
-              </li>
-            </ul>
+            
             {isAuthenticated ? authLinks : guestLinks}
           </div>
         </div>
