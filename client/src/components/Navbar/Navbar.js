@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { logoutUser } from '../../actions/authActions';
+// import { logoutUser } from '../../actions/authActions';
 import { logout } from '../../actions/auth';
 // import { clearCurrentProfile } from '../../actions/profileActions';
 
@@ -65,7 +65,7 @@ import { logout } from '../../actions/auth';
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4" >
         <div className="container">
           <Link className="navbar-brand" to="/">
             Mu-Seak
@@ -94,7 +94,7 @@ import { logout } from '../../actions/auth';
       </nav>
     );
   }
-}
+
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
