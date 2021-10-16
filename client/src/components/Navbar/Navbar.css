@@ -1,0 +1,12 @@
+.navbar {
+  color: black;
+  width: 100vw;
+  height: 60px;
+  display: block;
+}
+.navbar .container {
+  display: flex;
+}
+.navbar ul {
+  display: flex;
+}

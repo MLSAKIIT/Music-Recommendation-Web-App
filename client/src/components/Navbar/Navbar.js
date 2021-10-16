@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // import { logoutUser } from '../../actions/authActions';
 import { logout } from '../../actions/auth';
+import './Navbar.css'
 // import { clearCurrentProfile } from '../../actions/profileActions';
 
 // class Navbar extends Component {
@@ -65,7 +66,7 @@ import { logout } from '../../actions/auth';
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark " style={{height: '200px'}}>
+      <nav className="navbar">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Mu-Seak

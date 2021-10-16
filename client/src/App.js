@@ -28,7 +28,7 @@ const App = () => {
     <Provider store={store}>
       <BrowserRouter>
       <Navbar />
-      <Link style={{position: 'absolute', left: '1%', top: '1%', color: 'grey', opacity: '0.4'}} to='/'><FaHome size='40' /></Link>
+      
       <Alert />
         <Switch>
           <Route exact path="/" component={Home} />
