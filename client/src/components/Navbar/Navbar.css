@@ -17,17 +17,13 @@
   justify-content: space-between;
   width: 100vw;
 }
-.navbar-brand {
-    justify-self: start;
-    align-self: center;
-}
 .navbar ul {
   display: flex;
   justify-content: flex-end;
 }
 .navbar a {
   color: #fff;
-  padding: 0.45rem;
+  padding: 0 1em;
   margin: 0 0.25rem;
 }
 .navbar a:hover {
