@@ -13,7 +13,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 if(localStorage.token) {
   setAuthToken(localStorage.token)
