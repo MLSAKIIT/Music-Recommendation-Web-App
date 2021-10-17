@@ -31,7 +31,7 @@ const Login = ({ login, isAuthenticated }) => {
     <div className="box">
       <div className="box-left">
         <div className="login-box">
-          <h1 className="large1">Welcome Back</h1>
+          <h1 className="large1">WELCOME BACK</h1>
           <p className="lead1">
             Login into your account
           </p>
@@ -42,13 +42,13 @@ const Login = ({ login, isAuthenticated }) => {
               </div>
               <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
                 type="email"
-                placeholder=""
+                placeholder="E-mail"
                 name="email"
                 value={email}
                 onChange={onChange}
                 required="required"
               />
-              <span>Email Address</span>
+            
             </div>
             <div className="form-group">
               <div className="icon">
@@ -56,14 +56,14 @@ const Login = ({ login, isAuthenticated }) => {
               </div>
               <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
                 type="password"
-                placeholder=""
+                placeholder="Password"
                 name="password"
                 value={password}
                 onChange={onChange}
                 minLength="6"
                 required="required"
               />
-              <span>Password</span>
+           
             </div>
             <div className="buttons1">
             <input type="submit" className="btn-primary1"  value="Login" />

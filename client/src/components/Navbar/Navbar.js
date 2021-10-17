@@ -44,9 +44,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 
 
   return (
-    <nav className="navbar navbar-inner">
+   
+    <nav className= "navbar navbar-inner">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className= "navbar-brand" to="/">
           <span style={{fontSize: '1.5em', fontWeight: '400'}}>μ</span>-Seak
         </Link>
         <button
@@ -63,6 +64,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         </div>
       </div>
     </nav>
+
   );
 };
 
