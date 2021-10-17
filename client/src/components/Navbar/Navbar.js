@@ -54,7 +54,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/login">
+        <Link className="nav-link" to="/">
           Login
         </Link>
       </li>
@@ -62,10 +62,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   );
 
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-inner">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <span style={{fontSize: '1.5em'}}>μ</span>-Seak
+          <span style={{fontSize: '1.5em', fontWeight: '400'}}>μ</span>-Seak
         </Link>
         <button
           className="navbar-toggler"
