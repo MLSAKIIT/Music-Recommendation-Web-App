@@ -38,7 +38,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     <div className="box" >
       <div className="box-left">
         <div className="register-box">
-          <h1 className="large1" > Get Started</h1>
+          <h1 className="large1" > GET STARTED</h1>
           <p className="lead1" >
           Find the latest and greatest type of music
           </p>
@@ -47,57 +47,57 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-user-alt'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey', backgroundColor: '#1d3536' }}
+              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white',borderRadius:'0%',backgroundColor: '#1d3536' }}
                 type="text"
-                placeholder=""
+                placeholder="Full Name"
                 name="name"
                 value={name}
                 onChange={onChange}
                 required="required"
               />
-              <span>Name</span>
+            
             </div>
             <div className="form-group">
               <div className="icon">
                 <i class="fa fa-envelope"></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey', backgroundColor: '#1d3536;' }}
+              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white', backgroundColor: '#1d3536;' }}
                 type="email"
-                placeholder=""
+                placeholder="E-mail"
                 name="email"
                 value={email}
                 onChange={onChange}
                 required="required"
               />
-              <span>Email Address</span>
+ 
             </div>
             <div className="form-group">
               <div className="icon">
                 <i class='fas fa-lock'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
                 type="password"
-                placeholder=""
+                placeholder="Password"
                 name="password"
                 value={password}
                 onChange={onChange}
                 required="required"
               />
-              <span>Password</span>
+      
             </div>
             <div className="form-group">
               <div className="icon">
                 <i class='fas fa-key'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
                 type="password"
-                placeholder=""
+                placeholder="Confirm Password"
                 name="password2"
                 value={password2}
                 onChange={onChange}
                 required="required"
               />
-              <span>Confirm Password</span>
+
             </div>
             <div className="buttons1">
             <input type="submit" className="btn-primary1" value="Register" />

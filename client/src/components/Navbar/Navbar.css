@@ -24,6 +24,8 @@ html,body{
 .navbar-inner {
   background-color:black;
 }
+
+
 .navbar .container {
   display: flex;
   align-items: center;
