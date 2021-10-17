@@ -15,7 +15,7 @@ router.post('/',function(req,res)
     const newArtists = new artists ({
       name:array, 
     });
-
+    res.status(200).send(req.cookies);  
     newArtists.save((err) => {
       if (err) {
        console.log(err);

@@ -101,7 +101,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             </div>
             <div className="buttons1">
             <input type="submit" className="btn-primary1" value="Register" />
-            <Link to="/login" className='btn-link' ><button className="btn-secondary1">Login</button></Link>
+            <Link to="/" className='btn-link' ><button className="btn-secondary1">Login</button></Link>
             </div>
             
           </form>

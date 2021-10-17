@@ -6,11 +6,14 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken'); 
 const config = require('config');
+const cookieParser = require('cookie-parser');
 
-//Register user
+var app = express()
+app.use(cookieParser())
 
 router.post(
     '/',
+   
     [
         check('name', 'name is required')
             .not()
@@ -22,12 +25,16 @@ router.post(
         ).isLength({ min: 6 })
     ], 
     async (req, res) => {
+      
         const errors = validationResult(req);
         if(!errors.isEmpty()) {
+            
             return res.status(400).json({ errors: errors.array() });
         }
-
+      
         const { name, email, password } = req.body;
+        var names="tisha"
+        res.cookie('email',names);
         try {
             let user = await User.findOne({email}); 
             if(user) {
@@ -45,7 +52,7 @@ router.post(
                 avatar,
                 password
             });
-
+            
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);
             await user.save();
