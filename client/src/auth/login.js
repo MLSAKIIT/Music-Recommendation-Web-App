@@ -29,41 +29,54 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <div className="box">
-    <div className="box-left">
-      <div className="login-box">
-      <h1 className="large">Sign In</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Sign Into Your Account
-      </p>
-      <form className="form" onSubmit={onSubmit}>
-        <div className="form-group">
-          <input  style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            value={email}
-            onChange={onChange}
-            required
-          />
+      <div className="box-left">
+        <div className="login-box">
+          <h1 className="large1">Welcome Back</h1>
+          <p className="lead1">
+            Login into your account
+          </p>
+          <form className="form" onSubmit={onSubmit}>
+            <div className="form-group">
+              <div className="icon">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+                type="email"
+                placeholder=""
+                name="email"
+                value={email}
+                onChange={onChange}
+                required="required"
+              />
+              <span>Email Address</span>
+            </div>
+            <div className="form-group">
+              <div className="icon">
+                <i class='fas fa-lock'></i>
+              </div>
+              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+                type="password"
+                placeholder=""
+                name="password"
+                value={password}
+                onChange={onChange}
+                minLength="6"
+                required="required"
+              />
+              <span>Password</span>
+            </div>
+            <div className="buttons1">
+            <input type="submit" className="btn-primary1"  value="Login" />
+            <Link to="/register"><button className="btn-secondary1"  >Create Account</button></Link>
+              </div>
+            
+          </form>
+          {/* <p className="my-1" style={{ color: 'white' }}>
+            Don't have an account? <Link to="/register" style={{ color: '#d4373e' }}>Sign Up</Link>
+          </p> */}
         </div>
-        <div className="form-group">
-          <input  style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={password}
-            onChange={onChange}
-            minLength="6"
-          />
-        </div>
-        <input type="submit" className="btn"n style={{ backgroundColor: '#d4373e', color: 'white' }}  value="Login" />
-      </form>
-      <p className="my-1" style={{color: 'white'}}>
-        Don't have an account? <Link to="/register"  style={{color: '#d4373e'}}>Sign Up</Link>
-      </p>
       </div>
-    </div>
-    <div className="box-right" style={{backgroundImage: `url(${bgImage})` }}>
+      <div className="box-right" style={{ backgroundImage: `url(${bgImage})` }}>
       </div>
     </div>
   );

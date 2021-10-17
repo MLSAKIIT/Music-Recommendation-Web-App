@@ -1,0 +1,40 @@
+.navbar {
+  display: block;
+  background-color: blueviolet;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  /* position: fixed; */
+  z-index: 1;
+  width: 100vw;
+  top: 0;
+  border-bottom: solid 1px var(--primary-color);
+  opacity: 0.9;
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar a {
+  color: #fff;
+  padding: 0 1em;
+  margin: 0 0.25rem;
+}
+.navbar a:hover {
+  color: var(--primary-color);
+}
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .navbar-toggler {
+        display: flex;
+    }
+}    
