@@ -3,10 +3,8 @@ import Music from './components/Music';
 import login from "./auth/login";
 import register from "./auth/register";
 import Alert from "./layout/Alert";
-import { Switch, Route, BrowserRouter, Link } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
-// import { VscGithub } from "react-icons/vsc";
-import { FaHome } from "react-icons/fa";
 import './App.css'
 
 import { Provider } from "react-redux";
@@ -14,7 +12,7 @@ import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import artists from './components/Artists';
-import Home from './components/Home/Home';
+
 
 if(localStorage.token) {
   setAuthToken(localStorage.token)

@@ -22,14 +22,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   const authLinks = (
     <ul className="navbar-nav ml-auto">
       <li className="nav-item">
-        <Link className="nav-link" to="/ok1">
-          ok1
-        </Link>
+     
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/ok2">
-          ok2
-        </Link>
+    
       </li>
       <li className="nav-item">
         <a href="/" onClick={logout} className="nav-link">
@@ -46,20 +42,6 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
     </ul>
   );
 
-  const guestLinks = (
-    <ul className="navbar-nav ml-auto">
-      <li className="nav-item">
-        <Link className="nav-link" to="/register">
-          Sign Up
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/">
-          Login
-        </Link>
-      </li>
-    </ul>
-  );
 
   return (
     <nav className="navbar navbar-inner">
@@ -77,7 +59,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         </button>
 
         <div className="collapse navbar-collapse" id="mobile-nav">
-          {isAuthenticated ? authLinks : guestLinks}
+          {isAuthenticated ? authLinks : null}
         </div>
       </div>
     </nav>

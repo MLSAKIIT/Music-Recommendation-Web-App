@@ -33,14 +33,13 @@ router.post(
         }
       
         const { name, email, password } = req.body;
-        var names="tisha"
-        res.cookie('email',names);
+       
         try {
             let user = await User.findOne({email}); 
             if(user) {
                 return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
             }
-
+              
             const avatar = gravatar.url(email, {
                 s: '200',
                 r: 'pg',
@@ -52,11 +51,25 @@ router.post(
                 avatar,
                 password
             });
-            
+            // var id;
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);
             await user.save();
-
+        //    User.find({email:req.body.email},(error,data)=>{
+        //         if(error)
+        //         console.log(error);
+        //         else
+        //         {
+        //              console.log(data[0]._id);
+        //              id=data[0]._id;
+        //              console.log(id);
+                     
+        //         }
+              
+        //     });
+      
+        //     res.cookie('_id',data[0].email);
+       
             const payload = {
                 user: {
                     id: user.id
