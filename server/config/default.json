@@ -1,8 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://admin01:admin01@project-m0.qihnj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtSecret": "mysecrettoken",
-    "githubSecret": "de7831859fc2e86913e88a2646fbb8bcc1ccc840",
-    "githubClientId": "943d5c0e17971842a288"
-
-
+     "mongoDB": "mongodb+srv://sayantan:abcde@cluster0.h3v8y.mongodb.net/musicApp?retryWrites=true&w=majority",
+     "jwtSecret": "mysecrettoken"
 }
