@@ -12,7 +12,6 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-import Home from './components/Home';
 import artists from './components/Artists';
 
 if(localStorage.token) {
@@ -32,7 +31,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={login} />
           <Route exact path="/register" component={register} />
-          <Route exact path="/artists" component={artists} />
+          <Route  path="/artists" component={artists} />
           <Route exact path="/music" component={Music} />
         </Switch>
       </BrowserRouter>

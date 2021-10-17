@@ -31,7 +31,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/music" />;
+    return <Redirect to="/artists" />;
   }
 
   return (
@@ -80,6 +80,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             />
           </div>
           <input type="submit" className="btn" style={{ backgroundColor: '#d4373e', color: 'white' }} value="Register" />
+  
         </form>
         <p className="my-1" style={{ color: 'white' }}>
           Already have an account? <Link to="/login" className='' style={{ color: '#d4373e' }}>Sign In</Link>

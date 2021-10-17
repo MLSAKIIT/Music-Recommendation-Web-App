@@ -9,15 +9,16 @@ app.use(bodyParser.urlencoded({
 
 router.post('/',function(req,res)
 {
-    const {artistName}=req.body;
-    console.log(artistName);
+
+    const {array}=req.body;
+    console.log(array);
     const newArtists = new artists ({
-      name:artistName, 
+      name:array, 
     });
 
     newArtists.save((err) => {
       if (err) {
-       console.log("failure");
+       console.log(err);
       } else {
        console.log("success");
       }
