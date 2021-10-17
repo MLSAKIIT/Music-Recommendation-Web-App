@@ -14,7 +14,7 @@ const Login = ({ login, isAuthenticated }) => {
   });
 
   const { email, password } = formData;
-  let history = useHistory();
+
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -24,7 +24,7 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return history.push("/music");
+    return <Redirect to="/music"/>;
   }
 
   return (

@@ -1,14 +1,18 @@
 import React from "react";
 import axios from 'axios';
+import { Redirect } from "react-router";
+import { Link } from "react-router-dom";
 
 function ArtistsSendData(props)
 {
 
  
-    const senddata=()=>{
+    const  senddata=()=>{
         try
         {
-            axios.post('http://localhost:1821/artists',{array:props.data});
+             axios.post('http://localhost:1821/artists',{array:props.data});
+                
+            
         }
         catch(err)
         {
@@ -18,10 +22,15 @@ function ArtistsSendData(props)
     }
   
 return(
-    <div style={{display:"flex",flexDirection:"row",alignItems:"flex-end",justifyContent:"flex-end",paddingRight:"4px"}}>
-<button onClick={senddata}className="sendbtn" >
+
+<div style={{display:"flex",flexDirection:"row",alignItems:"flex-end",justifyContent:"flex-end",paddingRight:"4px"}}>
+<Link to="/music">
+<button onClick={senddata} className="sendbtn" >
+    
  I've selected all my favourite ones
+
 </button>
+</Link>
 </div>
 )
 }
