@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect ,useHistory} from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../actions/auth';
@@ -14,7 +14,7 @@ const Login = ({ login, isAuthenticated }) => {
   });
 
   const { email, password } = formData;
-
+  let history = useHistory();
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -24,7 +24,7 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/music" />;
+    return history.push("/music");
   }
 
   return (

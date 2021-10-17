@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect,useHistory } from "react-router-dom";
 import { setAlert } from "../actions/alert";
 import { register } from "../actions/auth";
 import PropTypes from "prop-types";
@@ -17,7 +17,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   });
 
   const { name, email, password, password2 } = formData;
-
+  let history = useHistory();
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
  
@@ -31,7 +31,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/music" />;
+    return <Redirect to="/artists" />;
   }
 
   return (

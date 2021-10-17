@@ -6,11 +6,14 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken'); 
 const config = require('config');
+const cookieParser = require('cookie-parser');
 
-//Register user
+var app = express()
+app.use(cookieParser())
 
 router.post(
     '/',
+   
     [
         check('name', 'name is required')
             .not()
@@ -22,18 +25,21 @@ router.post(
         ).isLength({ min: 6 })
     ], 
     async (req, res) => {
+      
         const errors = validationResult(req);
         if(!errors.isEmpty()) {
+            
             return res.status(400).json({ errors: errors.array() });
         }
-
+      
         const { name, email, password } = req.body;
+       
         try {
             let user = await User.findOne({email}); 
             if(user) {
                 return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
             }
-
+              
             const avatar = gravatar.url(email, {
                 s: '200',
                 r: 'pg',
@@ -45,11 +51,25 @@ router.post(
                 avatar,
                 password
             });
-
+            // var id;
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);
             await user.save();
-
+        //    User.find({email:req.body.email},(error,data)=>{
+        //         if(error)
+        //         console.log(error);
+        //         else
+        //         {
+        //              console.log(data[0]._id);
+        //              id=data[0]._id;
+        //              console.log(id);
+                     
+        //         }
+              
+        //     });
+      
+        //     res.cookie('_id',data[0].email);
+       
             const payload = {
                 user: {
                     id: user.id
