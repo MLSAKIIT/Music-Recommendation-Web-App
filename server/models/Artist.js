@@ -2,6 +2,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const artistSchema=mongoose.Schema({
+    user_id:Schema.Types.ObjectId,
+    user_name:String,
     name: {
         type: Array,
     },

@@ -51,24 +51,20 @@ router.post(
                 avatar,
                 password
             });
-            // var id;
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);
-            await user.save();
-        //    User.find({email:req.body.email},(error,data)=>{
-        //         if(error)
-        //         console.log(error);
-        //         else
-        //         {
-        //              console.log(data[0]._id);
-        //              id=data[0]._id;
-        //              console.log(id);
-                     
-        //         }
-              
-        //     });
-      
-        //     res.cookie('_id',data[0].email);
+            await user.save(function(err,user)
+            {
+                if(err)
+                console.log(err);
+                else
+                {
+                global.id=user._id;   //global variable is declared to use the name and id in artists collection .
+                global.user_name=user.name;
+                }
+            
+            });
+  
        
             const payload = {
                 user: {
