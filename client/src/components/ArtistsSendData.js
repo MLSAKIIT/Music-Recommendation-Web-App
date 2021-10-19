@@ -1,6 +1,5 @@
 import React from "react";
 import axios from 'axios';
-import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
 
 function ArtistsSendData(props)
