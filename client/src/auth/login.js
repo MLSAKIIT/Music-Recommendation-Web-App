@@ -40,7 +40,7 @@ const Login = ({ login, isAuthenticated }) => {
               <div className="icon">
                 <i class="fa fa-envelope"></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
                 type="email"
                 placeholder="E-mail"
                 name="email"
@@ -54,7 +54,7 @@ const Login = ({ login, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-lock'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
                 type="password"
                 placeholder="Password"
                 name="password"

@@ -49,19 +49,19 @@
 .form {
   margin: 5px;
   height: auto;
+  
 }
 .form-group {
  
-  margin: 15px 0;
-  padding: 10px 0;
+
   display: flex;
   background-color: #1d3536;
-  position: relative;
   width: 100%;
   margin-top: 10px;
+  
 }
 
-.form .form-group legend {
+/* .form .form-group input::placeholder {
   position: absolute;
   left: 0;
   padding: 5px 0;
@@ -71,7 +71,7 @@
   pointer-events: none;
   transition: 0.5s;
   color: rgb(211, 12, 12);
-}
+} */
 
 /* .form .form-group input:focus ~ legend,
 .form .form-group input:valid ~ legend {
@@ -90,17 +90,24 @@
   color: #fff;
   margin: auto;
 }
+
 input::placeholder {
   /* background-color: #1d3536; */
   color: #d61923;
   font-size: small;
   }
+  input:focus::placeholder {
+    /* background-color: #1d3536; */
+    color: #d61923;
+    font-size: 14px;
+    transform: translateY(-20px);
+    transition: 0.5s;
+    }
 .form .form-group input {
   border: none;
   background-color: #1d3536;
   outline: none;
   border-bottom: 1px solid grey;
-  padding: 5px;
   color: white;
 }
 
