@@ -6,17 +6,25 @@ import { login } from '../actions/auth';
 import bgImage from './register.jpg';
 import './register.css'
 import './login.css'
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { Container } from '@mui/material';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
-
+  const [isRevealPwd, setIsRevealPwd] = useState(false);
   const { email, password } = formData;
 
   const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  {
+     setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    }
+  
+   
 
   const onSubmit = e => {
     e.preventDefault();
@@ -54,8 +62,8 @@ const Login = ({ login, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-lock'></i>
               </div>
-              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
-                type="password"
+              <input style={{paddingTop:"20px",borderRadius:'0%',outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
+               type={isRevealPwd ? "text" : "password"}
                 placeholder="Password"
                 name="password"
                 value={password}
@@ -63,6 +71,13 @@ const Login = ({ login, isAuthenticated }) => {
                 minLength="6"
                 required="required"
               />
+              <div className={Container} style={{paddingTop:"12px",paddingLeft:"20px"}} onClick={() => setIsRevealPwd(prevState => !prevState)}>
+                {isRevealPwd?  <VisibilityIcon />:<VisibilityOffIcon/> }
+              </div>
+                
+              
+           
+            
            
             </div>
             <div className="buttons1">

@@ -6,7 +6,8 @@ import { register } from "../actions/auth";
 import PropTypes from "prop-types";
 import bgImage from './register.jpg';
 import './register.css'
-
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -15,7 +16,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password: "",
     password2: "",
   });
-
+  const [isRevealPwd, setIsRevealPwd] = useState(false);
+  const [isRevealCnfPwd, setIsRevealCnfPwd] = useState(false);
   const { name, email, password, password2 } = formData;
 
   const onChange = (e) =>
@@ -75,29 +77,33 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-lock'></i>
               </div>
-              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
-                type="password"
+              <input style={{paddingTop:"20px", outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid white' }}
+               type={isRevealPwd ? "text" : "password"}
                 placeholder="Password"
                 name="password"
                 value={password}
                 onChange={onChange}
                 required="required"
               />
-      
+        <div  style={{paddingTop:"12px"}} onClick={() => setIsRevealPwd(prevState => !prevState)}>
+                {isRevealPwd?  <VisibilityIcon />:<VisibilityOffIcon/> }
+              </div>
             </div>
             <div className="form-group">
               <div className="icon">
                 <i class='fas fa-key'></i>
               </div>
-              <input style={{ paddingTop:"20px",outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
-                type="password"
+              <input style={{ paddingTop:"20px",outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid white' }}
+               type={isRevealCnfPwd ? "text" : "password"}
                 placeholder="Confirm Password"
                 name="password2"
                 value={password2}
                 onChange={onChange}
                 required="required"
               />
-
+            <div  style={{paddingTop:"12px"}} onClick={() => setIsRevealCnfPwd(prevState => !prevState)}>
+                {isRevealCnfPwd?  <VisibilityIcon />:<VisibilityOffIcon/> }
+              </div>
             </div>
             <div className="buttons1">
             <input type="submit" className="btn-primary1" value="Register" />
