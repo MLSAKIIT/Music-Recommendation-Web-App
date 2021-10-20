@@ -47,7 +47,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-user-alt'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white',borderRadius:'0%',backgroundColor: '#1d3536' }}
+              <input style={{ paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid white',borderRadius:'0%',backgroundColor: '#1d3536' }}
                 type="text"
                 placeholder="Full Name"
                 name="name"
@@ -61,7 +61,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class="fa fa-envelope"></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white', backgroundColor: '#1d3536;' }}
+              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid white', backgroundColor: '#1d3536;' }}
                 type="email"
                 placeholder="E-mail"
                 name="email"
@@ -75,7 +75,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-lock'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
+              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -89,7 +89,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-key'></i>
               </div>
-              <input style={{ outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
+              <input style={{ paddingTop:"20px",outline: 'none', border: 'none', borderBottom: '1.5px solid white' }}
                 type="password"
                 placeholder="Confirm Password"
                 name="password2"
