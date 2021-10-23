@@ -63,13 +63,13 @@ export const register = ({ name, email, password }) => async dispatch => {
 };
 
 //Sawo Register
-export const sawoRegister = ({ name, email }) => async dispatch => {
+export const sawoRegister = ({ name, email, password }) => async dispatch => {
   const config = {
     headers: {
       'Content-Type': 'application/json'
     }
   }
-  const body = JSON.stringify({ name, email })
+  const body = JSON.stringify({ name, email, password })
   
   try {
     const res = await axios.post('http://localhost:1821/api/sawouser', body, config);
@@ -125,13 +125,13 @@ export const login = (email, password) => async dispatch => {
 };
 
 //Sawo Login
-export const sawoLogin = (name, email) => async dispatch => {
+export const sawoLogin = (name, email, password) => async dispatch => {
   const config = {
     headers: {
       'Content-Type': 'application/json'
     }
   }
-  const body = JSON.stringify({name, email});
+  const body = JSON.stringify({name, email, password});
   try {
     const res = await axios.post('http://localhost:1821/api/sawouser', body, config);
 
@@ -140,7 +140,7 @@ export const sawoLogin = (name, email) => async dispatch => {
       payload: res.data
     });
 
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (err) {
     console.log(err);
     const errors = err.response.data.errors;

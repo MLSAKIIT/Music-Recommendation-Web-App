@@ -14,9 +14,12 @@ app.use(cookieParser());
 router.get('/', [
     check("name", "name is required").not().isEmpty(),
     check("email", "Please enter a valid Email").isEmail(),
-    
+    check(
+      'password',
+      'Please enter a password with 6 or more characters'
+    ) 
   ], async (req, res) => {
-    const { name, email } = req.body;
+    const { name, email, password } = req.body;
     try {
         const user = await User.findOne({ email });
         res.json(user);
@@ -31,10 +34,10 @@ router.post(
   [
     check("name", "name is required").not().isEmpty(),
     check("email", "Please enter a valid Email").isEmail(),
-    // check(
-    //     'password',
-    //     'Please enter a password with 6 or more characters'
-    // ).isLength({ min: 6 })
+    check(
+        'password',
+        'Please enter a password with 6 or more characters'
+    )
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -42,8 +45,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email } = req.body;
-    let password = "123456";
+    const { name, email, password } = req.body;
 
     try {
       let user = await User.findOne({ email });

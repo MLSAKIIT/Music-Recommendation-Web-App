@@ -29,7 +29,7 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
       apiKey: API_KEY,
       onSuccess: (payload) => {
         try {
-          sawoLogin('s', payload.identifier, '123456');
+          sawoLogin('s', payload.identifier, payload.user_id);
         } catch (error) {
           console.log(error);
         }
