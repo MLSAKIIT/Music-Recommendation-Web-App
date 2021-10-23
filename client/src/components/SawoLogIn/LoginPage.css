@@ -33,9 +33,12 @@
     align-items: center;
   }
   .loggedin {
-    color: #155724;
-    background-color: #d4edda;
+    color: #571515;
+    background-color: #edd4d4;
     border-color: #c3e6cb;
     padding: 1rem;
+  }
+  .loggedin a {
+    color: red;
   }
   

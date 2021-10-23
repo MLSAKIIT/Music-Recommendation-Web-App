@@ -13,8 +13,9 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   const [sawoData, setSawoData] = useState({
     name: "",
     email: "",
+    password: "",
   });
-  const { name, email } = sawoData;
+  const { name, email, password } = sawoData;
   const [isUserLoggedIn, setUserLoggedIn] = useState(false);
   const [payload, setPayload] = useState({});
 
@@ -28,14 +29,14 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
       apiKey: API_KEY,
       onSuccess: (payload) => {
         try {
-          sawoLogin('s', payload.identifier);
+          sawoLogin('s', payload.identifier, '123456');
         } catch (error) {
           console.log(error);
         }
         
         console.log("Payload : " + JSON.stringify(payload));
         setUserLoggedIn(true);
-        console.log(payload.identifier);
+        console.log(payload);
         setPayload(payload);
       },
     };
@@ -58,16 +59,15 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   return (
     <div className="containerStyle">
       <section>
-        <h2 className="title">SAWO React Example App</h2>
-        <h2 className="title">User Logged In : {isUserLoggedIn.toString()}</h2>
+        <h2 className="title">Log In with Sawo</h2>
 
         {!isUserLoggedIn ? (
           <div className="formContainer" id="sawo-container"></div>
         ) : (
           <div className="loggedin">
             <h2>User Successful Login</h2>
-            <div>UserId: {payload.user_id}</div>
-            <div>Verification Token: {payload.verification_token}</div>
+            <div>You are redirecting to music page</div>
+            <p>If you are not Redirected, then <Link to = '/music'>Click Here</Link></p>
           </div>
         )}
       </section>
