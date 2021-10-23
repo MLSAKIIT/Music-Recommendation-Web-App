@@ -6,17 +6,11 @@ import { connect } from "react-redux";
 import { logout } from "../../actions/auth";
 import "./Navbar.css";
 
-
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
-
   const authLinks = (
     <ul className="navbar-nav ml-auto">
-      <li className="nav-item">
-     
-      </li>
-      <li className="nav-item">
-    
-      </li>
+      <li className="nav-item"></li>
+      <li className="nav-item"></li>
       <li className="nav-item">
         <a href="/" onClick={logout} className="nav-link">
           {/* <img
@@ -32,13 +26,11 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
     </ul>
   );
 
-
   return (
-   
-    <nav className= "navbar navbar-inner">
+    <nav className="navbar navbar-inner">
       <div className="container">
-        <Link className= "navbar-brand" to="/">
-          <span style={{fontSize: '1.5em', fontWeight: '400'}}>μ</span>-Seak
+        <Link className="navbar-brand" to="/">
+          <span style={{ fontSize: "1.5em", fontWeight: "400" }}>μ</span>-Seak
         </Link>
         <button
           className="navbar-toggler"
@@ -54,7 +46,6 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         </div>
       </div>
     </nav>
-
   );
 };
 

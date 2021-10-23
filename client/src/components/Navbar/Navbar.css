@@ -1,14 +1,15 @@
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .navbar {
   display: block;
-  background-color: #1d3536;
+  background-color: #ff5c58;
   /* background-color: rgba(0, 0, 0, 0.8); */
   justify-content: space-between;
   align-items: center;
@@ -22,9 +23,8 @@ html,body{
   /* position: absolute; */
 }
 .navbar-inner {
-  background-color:black;
+  background-color: black;
 }
-
 
 .navbar .container {
   display: flex;
@@ -39,22 +39,21 @@ html,body{
   justify-content: space-between;
 }
 .navbar a {
-  color: rgb(231, 15, 15);
+  color: red;
   padding: 0 1em;
   margin: 0 0.25rem;
   font-size: larger;
+  transition: 0.4s all;
 }
 .navbar a:hover {
   /* color: var(--primary-color); */
-  color: #f10d19;
-
 }
 .navbar-toggler {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 700px) {
-    .navbar-toggler {
-        display: flex;
-    }
-}    
+  .navbar-toggler {
+    display: flex;
+  }
+}

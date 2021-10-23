@@ -1,0 +1,42 @@
+.sideBar {
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+   */
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  animation: gradient 15s ease-in infinite;
+  box-sizing: border-box;
+  padding: 3rem;
+  font-size: 1.5rem;
+}
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+.sideBar span {
+  color: #3db2ff;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.content {
+  margin-top: 5em;
+}
+.sideBar a {
+  display: block;
+  margin-top: 1em;
+  color: aquamarine;
+  font-weight: 500;
+  transition: all 0.4s;
+}
+.sideBar a:hover {
+  font-size: 1.75rem;
+  color: red;
+}

@@ -1,0 +1,9 @@
+.library {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.main {
+  padding-left: 1rem;
+}

@@ -1,8 +1,8 @@
 ul {
-    list-style: none;
-  }
+  list-style: none;
+}
 
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
