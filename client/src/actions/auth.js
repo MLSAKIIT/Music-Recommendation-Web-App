@@ -24,7 +24,7 @@ export const loadUser = () => async dispatch => {
       payload: res.data
     });
   } catch (err) {
-    console.log(err);
+    console.log(err); ///need to check
     dispatch({
       type: AUTH_ERROR
     });
@@ -132,6 +132,11 @@ export const sawoLogin = (name, email, password) => async dispatch => {
     }
   }
   const body = JSON.stringify({name, email, password});
+  // const body = {
+  //   "name": "S",
+  //   "email": "test1@c.in",
+  //   "password": "123456"
+  // }
   try {
     const res = await axios.post('http://localhost:1821/api/sawouser', body, config);
 
@@ -140,7 +145,7 @@ export const sawoLogin = (name, email, password) => async dispatch => {
       payload: res.data
     });
 
-    dispatch(loadUser());
+    // dispatch(loadUser());
   } catch (err) {
     console.log(err);
     const errors = err.response.data.errors;

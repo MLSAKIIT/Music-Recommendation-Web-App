@@ -11,23 +11,23 @@ const cookieParser = require("cookie-parser");
 var app = express();
 app.use(cookieParser());
 
-router.get('/', [
-    check("name", "name is required").not().isEmpty(),
-    check("email", "Please enter a valid Email").isEmail(),
-    check(
-      'password',
-      'Please enter a password with 6 or more characters'
-    ) 
-  ], async (req, res) => {
-    const { name, email, password } = req.body;
-    try {
-        const user = await User.findOne({ email });
-        res.json(user);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('server error');
-    }
-});
+// router.get('/', [
+//     check("name", "name is required").not().isEmpty(),
+//     check("email", "Please enter a valid Email").isEmail(),
+//     check(
+//       'password',
+//       'Please enter a password with 6 or more characters'
+//     ) 
+//   ], async (req, res) => {
+//     const { name, email, password } = req.body;
+//     try {
+//         const user = await User.findOne({ email });
+//         res.json(user);
+//     } catch (err) {
+//         console.error(err.message);
+//         res.status(500).send('server error');
+//     }
+// });
 router.post(
   "/",
 
@@ -49,8 +49,13 @@ router.post(
 
     try {
       let user = await User.findOne({ email });
+      // const isMatch = await bcrypt.compare(password, user.password);  
+      let isMatch = 1  
+            if(!isMatch) {
+                return res .status(400).json({ errors: [{ msg: 'wrong password' }] });
+            }
       if (user) {
-          console.log("user Found ", user);
+          console.log("user Found ");
         const payload = {
           user: {
             id: user._id,
@@ -66,6 +71,7 @@ router.post(
           }
         );
       } else {
+        console.log('registering new user');
         const avatar = gravatar.url(email, {
             s: "200",
             r: "pg",
@@ -79,6 +85,7 @@ router.post(
           });
           const salt = await bcrypt.genSalt(10);
           user.password = await bcrypt.hash(password, salt);
+          // user.password = password
           await user.save(function (err, user) {
             if (err) console.log(err);
             else {

@@ -15,13 +15,9 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
     email: "",
     password: "",
   });
-  const { name, email, password } = sawoData;
   const [isUserLoggedIn, setUserLoggedIn] = useState(false);
   const [payload, setPayload] = useState({});
-
-  // const onChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
+  
   useEffect(() => {
     var config = {
       containerID: "sawo-container",
@@ -43,11 +39,6 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
     let sawo = new Sawo(config);
     sawo.showForm();
   }, []);
-
-  // const onSubmit = (e) => {
-  //   e.preventDefault();
-  //   sawoLogin(name, email);
-  // };
   
 
   if (isAuthenticated) {
