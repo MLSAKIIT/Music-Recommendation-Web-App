@@ -22,7 +22,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
- 
+    
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
@@ -31,6 +31,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       register({ name, email, password });
     }
   };
+
+
 
   if (isAuthenticated) {
     return <Redirect to="/artists" />;
@@ -45,11 +47,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           Find the latest and greatest type of music
           </p>
           <form className="form" onSubmit={onSubmit}>
-            <div className="form-group" >
+            <div className="form-group adjust" >
               <div className="icon">
                 <i class='fas fa-user-alt'></i>
               </div>
-              <input style={{ paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid white',borderRadius:'0%',backgroundColor: '#1d3536' }}
+              <input className="val" style={{ paddingTop:"15px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey',borderRadius:'0%',backgroundColor: '#1d3536' }}
                 type="text"
                 placeholder="Full Name"
                 name="name"
@@ -59,11 +61,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               />
             
             </div>
-            <div className="form-group">
+            <div className="form-group adjust">
               <div className="icon">
                 <i class="fa fa-envelope"></i>
               </div>
-              <input style={{paddingTop:"20px", outline: 'none', border: 'none', borderBottom: '1.5px solid white', backgroundColor: '#1d3536;' }}
+              <input style={{paddingTop:"15px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey', backgroundColor: '#1d3536;' }}
                 type="email"
                 placeholder="E-mail"
                 name="email"
@@ -77,7 +79,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-lock'></i>
               </div>
-              <input style={{paddingTop:"20px", outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid white' }}
+              <input style={{paddingTop:"15px", outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
                type={isRevealPwd ? "text" : "password"}
                 placeholder="Password"
                 name="password"
@@ -93,7 +95,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class='fas fa-key'></i>
               </div>
-              <input style={{ paddingTop:"20px",outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid white' }}
+              <input style={{ paddingTop:"15px",outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
                type={isRevealCnfPwd ? "text" : "password"}
                 placeholder="Confirm Password"
                 name="password2"
@@ -101,7 +103,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 onChange={onChange}
                 required="required"
               />
-            <div  style={{paddingTop:"12px"}} onClick={() => setIsRevealCnfPwd(prevState => !prevState)}>
+            <div  style={{paddingTop:'12px', marginReft: '5px'}} onClick={() => setIsRevealCnfPwd(prevState => !prevState)}>
                 {isRevealCnfPwd?  <VisibilityIcon />:<VisibilityOffIcon/> }
               </div>
             </div>

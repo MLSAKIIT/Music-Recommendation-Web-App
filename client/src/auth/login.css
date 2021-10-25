@@ -7,15 +7,18 @@
 }
 .login-box {
     margin: 3rem auto;
-    width: 88%;
+    width: 90%;
 }
 .form .form-group {
   margin: 1.2rem 0;
 }
+.adjust1{
+  width: 86%;
+}
 
 .form .form-text {
-  display: block;
-  margin-top: 0.3rem;
+  /* display: block; */
+  /* margin-top: 0.3rem; */
   color: #888;
 }
 

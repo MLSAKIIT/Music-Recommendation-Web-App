@@ -6,10 +6,10 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken'); 
 const config = require('config');
-const cookieParser = require('cookie-parser');
+// const cookieParser = require('cookie-parser');
 
-var app = express()
-app.use(cookieParser())
+// var app = express()
+// app.use(cookieParser())
 
 router.post(
     '/',
@@ -37,7 +37,7 @@ router.post(
         try {
             let user = await User.findOne({email}); 
             if(user) {
-                return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+                return res.status(400).json({ errors: [{ msg: 'User already exists'}] });
             }
               
             const avatar = gravatar.url(email, {
