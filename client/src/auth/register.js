@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Link, Redirect} from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../actions/alert";
 import { register } from "../actions/auth";
 import PropTypes from "prop-types";
-import bgImage from './register.jpg';
-import './register.css'
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import bgImage from "./register.jpg";
+import "./register.css";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
@@ -39,17 +38,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div className="box" >
+    <div className="box">
       <div className="box-left">
         <div className="register-box">
-          <h1 className="large1" > GET STARTED</h1>
-          <p className="lead1" >
-          Find the latest and greatest type of music
-          </p>
+          <h1 className="large1"> GET STARTED</h1>
+          <p className="lead1">Find the latest and greatest type of music</p>
           <form className="form" onSubmit={onSubmit}>
             <div className="form-group adjust" >
               <div className="icon">
-                <i class='fas fa-user-alt'></i>
+                <i class="fas fa-user-alt"></i>
               </div>
               <input className="val" style={{ paddingTop:"15px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey',borderRadius:'0%',backgroundColor: '#1d3536' }}
                 type="text"
@@ -59,7 +56,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 onChange={onChange}
                 required="required"
               />
-            
             </div>
             <div className="form-group adjust">
               <div className="icon">
@@ -73,11 +69,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 onChange={onChange}
                 required="required"
               />
- 
             </div>
             <div className="form-group">
               <div className="icon">
-                <i class='fas fa-lock'></i>
+                <i class="fas fa-lock"></i>
               </div>
               <input style={{paddingTop:"15px", outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
                type={isRevealPwd ? "text" : "password"}
@@ -87,13 +82,16 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 onChange={onChange}
                 required="required"
               />
-        <div  style={{paddingTop:"12px"}} onClick={() => setIsRevealPwd(prevState => !prevState)}>
-                {isRevealPwd?  <VisibilityIcon />:<VisibilityOffIcon/> }
+              <div
+                style={{ paddingTop: "12px" }}
+                onClick={() => setIsRevealPwd((prevState) => !prevState)}
+              >
+                {isRevealPwd ? <VisibilityIcon /> : <VisibilityOffIcon />}
               </div>
             </div>
             <div className="form-group">
               <div className="icon">
-                <i class='fas fa-key'></i>
+                <i class="fas fa-key"></i>
               </div>
               <input style={{ paddingTop:"15px",outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
                type={isRevealCnfPwd ? "text" : "password"}
@@ -107,19 +105,36 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 {isRevealCnfPwd?  <VisibilityIcon />:<VisibilityOffIcon/> }
               </div>
             </div>
-            <div className="buttons1">
-            <input type="submit" className="btn-primary1" value="Register" />
-            <Link to="/" className='btn-link' ><button className="btn-secondary1">Login</button></Link>
+            <div className="submit-button">
+              <div className="buttons1">
+                <input
+                  type="submit"
+                  className="btn-primary1"
+                  value="Register"
+                />
+                <Link to="/" className="btn-link">
+                  <button className="btn-secondary1">Login</button>
+                </Link>
+              </div>
+              <Link to="/loginSawo">
+                <button
+                  className="btn-primary1 sawo-button"
+                  style={{ margin: "auto" }}
+                >
+                  Log In With Sawo
+                </button>
+              </Link>
             </div>
-            
           </form>
           {/* <p className="my-1" style={{ color: 'white' }}>
             Already have an account? <Link to="/login" className='' style={{ color: '#d4373e' }}>Sign In</Link>
           </p> */}
         </div>
       </div>
-      <div className="box-right" style={{ backgroundImage: `url(${bgImage})` }}>
-      </div>
+      <div
+        className="box-right"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      ></div>
     </div>
   );
 };

@@ -12,6 +12,7 @@ import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import artists from './components/Artists';
+import LoginPage from './components/SawoLogIn/SawoLogIn';
 
 
 if(localStorage.token) {
@@ -36,6 +37,7 @@ const App = () => {
           <Route exact path="/register" component={register} />
           <Route  path="/artists" component={artists} />
           <Route exact path="/music" component={Music} />
+          <Route exact path="/loginSawo" component={LoginPage} />
         </Switch>
       </BrowserRouter>
     </Provider>
