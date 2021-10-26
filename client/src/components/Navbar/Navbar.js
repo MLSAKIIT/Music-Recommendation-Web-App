@@ -12,10 +12,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   const authLinks = (
     <ul className="navbar-nav ml-auto">
       <li className="nav-item">
-     
+
       </li>
       <li className="nav-item">
-    
+
       </li>
       <li className="nav-item">
         <a href="/" onClick={logout} className="nav-link">
@@ -34,12 +34,16 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 
 
   return (
-   
-    <nav className= "navbar navbar-inner">
-      <div className="container">
-        <Link className= "navbar-brand" to="/">
-          <span style={{fontSize: '1.5em', fontWeight: '400'}}>μ</span>-Seak
-        </Link>
+    <>
+    
+    <nav className=" navbar" id="overlay" >
+      
+      <div className="container" >
+        <div className="logo" >
+          <Link className="navbar-brand" to="/">
+            μ-seak
+          </Link>
+        </div>
         <button
           className="navbar-toggler"
           type="button"
@@ -54,6 +58,8 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         </div>
       </div>
     </nav>
+    
+    </>
 
   );
 };

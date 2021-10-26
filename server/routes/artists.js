@@ -19,7 +19,7 @@ var username=global.user_name;
       name:array, 
       
     });
-
+    // res.status(200).send(req.cookies);  
     newArtists.save((err) => {
       if (err) {
        console.log(err);
