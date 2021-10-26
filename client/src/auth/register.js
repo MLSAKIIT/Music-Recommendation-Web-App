@@ -39,7 +39,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <div className="box">
+    <div className="box" >
       <div className="box-left">
         <div className="register-box">
           <h1 className="large1"> GET STARTED</h1>
@@ -119,7 +119,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               </div>
               <div className="divider">
                 <hr></hr>
-                <p>or</p>
+                <p>OR</p>
                 <hr></hr>
               </div>
               <Link to="/loginSawo">
@@ -127,7 +127,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                   className="btn-primary1 sawo-button"
                   style={{ margin: "auto" }}
                 >
-                  Log in with Sawo
+                  Log-in with SAWO LABS
                 </button>
               </Link>
             </div>
@@ -138,7 +138,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         </div>
       </div>
       <div
-        className="box-right"
+        className="box-right img-fluid"
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
     </div>
@@ -156,3 +156,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { setAlert, register })(Register);
+// var user_name=payload.email;
+// user_name  = user_name.substring(0, user_name.lastIndexOf("@"));

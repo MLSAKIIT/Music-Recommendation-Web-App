@@ -15,7 +15,14 @@
 .adjust1{
   width: 86%;
 }
-
+button span{
+  line-height: 14px;
+  font-size: 14px;
+  padding: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;   
+}
 .form .form-text {
   /* display: block; */
   /* margin-top: 0.3rem; */

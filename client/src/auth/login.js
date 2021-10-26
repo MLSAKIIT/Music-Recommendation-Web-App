@@ -83,9 +83,11 @@ const Login = ({ login, isAuthenticated }) => {
               <Link to="/loginSawo">
                 <button
                   className="btn-primary1 sawo-button"
-                  style={{ margin: "auto" }}
+                  style={{ margin: "auto"}}
                 >
-                  Log in with Sawo
+          
+                <span> Log-in with SAWO LABS</span> 
+                
                 </button>
               </Link>
             </div>

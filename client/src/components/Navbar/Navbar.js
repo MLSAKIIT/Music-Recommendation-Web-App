@@ -40,8 +40,8 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
       
       <div className="container" >
         <div className="logo" >
-          <Link className="navbar-brand" to="/">
-            μ-seak
+          <Link to="/">
+            <span className="navbar-brand" >μ-seak</span>
           </Link>
         </div>
         <button
