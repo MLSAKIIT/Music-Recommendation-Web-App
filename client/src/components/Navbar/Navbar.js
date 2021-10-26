@@ -34,9 +34,11 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
 
 
   return (
-
-    <nav className=" navbar" id="overlay">
-      <div className="container">
+    <>
+    
+    <nav className=" navbar" id="overlay" >
+      
+      <div className="container" >
         <div className="logo" >
           <Link className="navbar-brand" to="/">
             μ-seak
@@ -56,7 +58,8 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         </div>
       </div>
     </nav>
-
+    
+    </>
 
   );
 };

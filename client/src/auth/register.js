@@ -6,6 +6,7 @@ import { register } from "../actions/auth";
 import PropTypes from "prop-types";
 import bgImage from "./register.jpg";
 import "./register.css";
+import "./login.css"
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
@@ -48,7 +49,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class="fas fa-user-alt"></i>
               </div>
-              <input className="val" style={{ paddingTop:"15px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey',borderRadius:'0%',backgroundColor: '#1d3536' }}
+              <input className="val" style={{ paddingTop:"12px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey',borderRadius:'0%',backgroundColor: '#1d3536' }}
                 type="text"
                 placeholder="Full Name"
                 name="name"
@@ -61,7 +62,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class="fa fa-envelope"></i>
               </div>
-              <input style={{paddingTop:"15px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey', backgroundColor: '#1d3536;' }}
+              <input style={{paddingTop:"12px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey', backgroundColor: '#1d3536;' }}
                 type="email"
                 placeholder="E-mail"
                 name="email"
@@ -74,7 +75,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class="fas fa-lock"></i>
               </div>
-              <input style={{paddingTop:"15px", outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
+              <input style={{paddingTop:"12px", outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
                type={isRevealPwd ? "text" : "password"}
                 placeholder="Password"
                 name="password"
@@ -93,7 +94,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div className="icon">
                 <i class="fas fa-key"></i>
               </div>
-              <input style={{ paddingTop:"15px",outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
+              <input style={{ paddingTop:"12px",outline: 'none', border: 'none',borderRadius:'0%', borderBottom: '1.5px solid grey' }}
                type={isRevealCnfPwd ? "text" : "password"}
                 placeholder="Confirm Password"
                 name="password2"
@@ -116,12 +117,17 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                   <button className="btn-secondary1">Login</button>
                 </Link>
               </div>
+              <div className="divider">
+                <hr></hr>
+                <p>or</p>
+                <hr></hr>
+              </div>
               <Link to="/loginSawo">
                 <button
                   className="btn-primary1 sawo-button"
                   style={{ margin: "auto" }}
                 >
-                  Log In With Sawo
+                  Log in with Sawo
                 </button>
               </Link>
             </div>
