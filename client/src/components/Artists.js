@@ -18,7 +18,7 @@ function Artists() {
     }
   };
 
-            let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
+  let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
   {
       if(searchTerm==="")
       return ar;
@@ -28,6 +28,8 @@ function Artists() {
       }
 
   });
+
+  
   let content = an.map((artist) => (
     <Button
       onclick={onclickHandler}
@@ -46,7 +48,7 @@ function Artists() {
        
         <div className="searchbtn">
             
-        <input type="text" name="search" placeholder="Search.." onChange={(event)=>{
+        <input className="searchInput" type="text" name="search" placeholder="Search.." onChange={(event)=>{
           setSearchTerm(event.target.value);  
         }}/>
        </div>

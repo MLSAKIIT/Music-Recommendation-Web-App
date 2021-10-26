@@ -6,10 +6,7 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken'); 
 const config = require('config');
-const cookieParser = require('cookie-parser');
 
-var app = express()
-app.use(cookieParser())
 
 router.post(
     '/',
