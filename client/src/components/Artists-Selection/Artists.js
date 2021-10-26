@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 import React, { useState } from "react";
-import artistsName from "./../data/artists"
+import artistsName from "../../data/artists"
 import Button from "./ArtistsButton";
 import './ArtistsButton.css'
 import ArtistsSendData from './ArtistsSendData';

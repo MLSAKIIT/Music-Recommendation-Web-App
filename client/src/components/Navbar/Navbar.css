@@ -6,26 +6,26 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
-
+.navbar-brand
+{
+  font-size: larger;
+}
 .navbar {
-  background-color: #1d3536;
+ 
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 0;
-  position: fixed;
+  /* position: fixed; */
   width: 100vw;
   /* top: 0; */
-  border-bottom: solid 1px var(--primary-color);
+  /* border-bottom: solid 1px var(--primary-color); */
   height: 9%;
 }
 
 #overlay {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.7); 
+  position: relative; 
+  background-color: black;
+  padding:1%; 
 }
 
 .logo {
@@ -38,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(14, 13, 13, 0.7); 
   /* border: 2px solid blue; */
 }
 

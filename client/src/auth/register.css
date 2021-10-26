@@ -10,16 +10,19 @@
   padding: 0;
 }
 .box {
-  height: 100vh;
+  height: max-content;
   display: flex;
   margin: 0px;
-  padding: 0px;
+ 
   background-color: #1d3536;
 }
 
 .box-left {
   width: 47%;
-  padding: 30px;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
 }
 
 .box-right {
@@ -98,7 +101,7 @@
 input::placeholder {
   /* background-color: #1d3536; */
   /* color: #d61923; */
-  color: gray;
+  color: white;
   font-size: 18px;
   background-color: #1d3536;
   }

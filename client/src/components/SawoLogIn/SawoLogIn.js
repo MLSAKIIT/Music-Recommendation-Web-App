@@ -25,7 +25,8 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
       apiKey: API_KEY,
       onSuccess: (payload) => {
         try {
-          sawoLogin('s', payload.identifier, payload.user_id);
+          var mail= payload.identifier.substring(0,  payload.identifier.lastIndexOf("@"))
+          sawoLogin(mail, payload.identifier, payload.user_id);
         } catch (error) {
           console.log(error);
         }
@@ -42,7 +43,7 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   
 
   if (isAuthenticated) {
-    return <Redirect to="/music" />;
+    return <Redirect to="/choose-action" />;
   }
 
   
