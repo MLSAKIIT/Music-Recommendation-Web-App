@@ -38,17 +38,11 @@ const Login = ({ login, isAuthenticated }) => {
           <h1 className="large1">WELCOME BACK</h1>
           <p className="lead1">Login into your account</p>
           <form className="form" onSubmit={onSubmit}>
-            <div className="form-group">
+            <div className="form-group adjust">
               <div className="icon">
                 <i class="fa fa-envelope"></i>
               </div>
-              <input
-                style={{
-                  paddingTop: "20px",
-                  outline: "none",
-                  border: "none",
-                  borderBottom: "1.5px solid grey",
-                }}
+              <input style={{ paddingTop: "15px", outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
                 type="email"
                 placeholder="E-mail"
                 name="email"
@@ -61,14 +55,7 @@ const Login = ({ login, isAuthenticated }) => {
               <div className="icon">
                 <i class="fas fa-lock"></i>
               </div>
-              <input
-                style={{
-                  paddingTop: "20px",
-                  borderRadius: "0%",
-                  outline: "none",
-                  border: "none",
-                  borderBottom: "1.5px solid grey",
-                }}
+              <input style={{ paddingTop: "15px", borderRadius: '0%', outline: 'none', border: 'none', borderBottom: '1.5px solid grey' }}
                 type={isRevealPwd ? "text" : "password"}
                 placeholder="Password"
                 name="password"
@@ -77,11 +64,7 @@ const Login = ({ login, isAuthenticated }) => {
                 minLength="6"
                 required="required"
               />
-              <div
-                className={Container}
-                style={{ paddingTop: "12px", paddingLeft: "20px" }}
-                onClick={() => setIsRevealPwd((prevState) => !prevState)}
-              >
+              <div className={Container} style={{ paddingTop: "12px" }} onClick={() => setIsRevealPwd(prevState => !prevState)}>
                 {isRevealPwd ? <VisibilityIcon /> : <VisibilityOffIcon />}
               </div>
             </div>
@@ -92,12 +75,17 @@ const Login = ({ login, isAuthenticated }) => {
                   <button className="btn-secondary1">Create Account</button>
                 </Link>
               </div>
+              <div className="divider">
+                <hr></hr>
+                <p>or</p>
+                <hr></hr>
+              </div>
               <Link to="/loginSawo">
                 <button
                   className="btn-primary1 sawo-button"
                   style={{ margin: "auto" }}
                 >
-                  Log In With Sawo
+                  Log in with Sawo
                 </button>
               </Link>
             </div>

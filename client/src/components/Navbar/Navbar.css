@@ -1,36 +1,44 @@
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .navbar {
-  display: block;
   background-color: #1d3536;
-  /* background-color: rgba(0, 0, 0, 0.8); */
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 0;
-  /* position: fixed; */
-  z-index: 1;
-  /* width: 100vw; */
-  width: 100%;
+  position: fixed;
+  width: 100vw;
   /* top: 0; */
   border-bottom: solid 1px var(--primary-color);
-  /* position: absolute; */
-}
-.navbar-inner {
-  background-color:black;
+  height: 9%;
 }
 
+#overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7); 
+}
 
+.logo {
+  margin-left: 0;
+  color: #f10d19;
+  /* border: 2px solid yellow; */
+}
 .navbar .container {
+  padding: auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 100vw; */
+  /* border: 2px solid blue; */
 }
 
 .navbar ul {
@@ -47,14 +55,13 @@ html,body{
 .navbar a:hover {
   /* color: var(--primary-color); */
   color: #f10d19;
-
 }
 .navbar-toggler {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 700px) {
-    .navbar-toggler {
-        display: flex;
-    }
-}    
+  .navbar-toggler {
+    display: flex;
+  }
+}

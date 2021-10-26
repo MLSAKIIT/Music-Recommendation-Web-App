@@ -6,10 +6,10 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const cookieParser = require("cookie-parser");
+// const cookieParser = require("cookie-parser");
 
 var app = express();
-app.use(cookieParser());
+// app.use(cookieParser());
 
 // router.get('/', [
 //     check("name", "name is required").not().isEmpty(),

@@ -30,7 +30,8 @@
   background-repeat: no-repeat;
 }
 .register-box {
-  width: 88%;
+  width: 94%;
+  margin: 2.4rem auto;
 }
 .lead1 {
   color: white;
@@ -49,16 +50,18 @@
 .form {
   margin: 5px;
   height: auto;
-  
 }
 .form-group {
- 
-
   display: flex;
   background-color: #1d3536;
-  width: 100%;
-  margin-top: 10px;
+  width: 95%;
+  margin-top: 5px;
+  /* border: 2px solid blue; */
   
+}
+
+.adjust{
+  width: 90%;
 }
 
 /* .form .form-group input::placeholder {
@@ -85,6 +88,7 @@
   padding: 5px;
   margin: 6px;
   margin-left: 0;
+  margin-top: 15px;
 }
 .icon i {
   color: #fff;
@@ -93,30 +97,36 @@
 
 input::placeholder {
   /* background-color: #1d3536; */
-  color: #d61923;
-  font-size: small;
+  /* color: #d61923; */
+  color: gray;
+  font-size: 18px;
+  background-color: #1d3536;
   }
   input:focus::placeholder {
     /* background-color: #1d3536; */
     color: #d61923;
     font-size: 14px;
-    transform: translateY(-20px);
+    transform: translateY(-24px);
     transition: 0.5s;
     }
 .form .form-group input {
   border: none;
   background-color: #1d3536;
   outline: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1.5px solid grey;
   color: white;
+  width: 50%;
 }
 
 .buttons1 {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  margin-top: 45px;
-  width: 75%;
+  margin-top: 5px;
+  margin-bottom: 2;
+  width: 76%;
+  /* border: 2px solid red; */
+  margin-left: 10%;
 }
 .btn-primary1 {
   padding: 8px 12px;
@@ -125,6 +135,7 @@ input::placeholder {
   border: 1.3px solid var(--primary);
   background-color: #d4373e;
   color: white;
+  margin: 5px;
 }
 .btn-primary1:hover {
   background-color: #1d3536;
@@ -142,6 +153,7 @@ input::placeholder {
   border: 1.3px solid var(--primary);
   cursor: pointer;
   text-align: center;
+  margin: 5px;
 }
 
 .btn-secondary1:hover {

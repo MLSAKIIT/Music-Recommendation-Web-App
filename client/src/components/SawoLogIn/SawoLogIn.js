@@ -50,7 +50,7 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   return (
     <div className="containerStyle">
       <section>
-        <h2 className="title">Log In with Sawo</h2>
+        <h2 className="title">Log in with Sawo</h2>
 
         {!isUserLoggedIn ? (
           <div className="formContainer" id="sawo-container"></div>

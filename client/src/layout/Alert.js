@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 
 const Alert = ({ alerts }) =>
   alerts.map((alert) => (
-    <div key={alert.id} className={`alert alert-${alert.alertType}`}>
-      {alert.msg}
+    <div className="alert-container" style={{position: 'relative', margin: 'auto'}}>
+    <div key={alert.id} className={`alert alert-${alert.alertType}`} style={{position: 'absolute',width: '40%', textAlign: 'center',  marginLeft: '30%', marginTop: '2%'}}>
+     {alert.msg}
+    </div>
     </div>
   ));
 
