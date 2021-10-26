@@ -43,10 +43,8 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   
 
   if (isAuthenticated) {
-    return <Redirect to="/choose-action" />;
+    return <Redirect to="/loginSawo/choose-action" />;
   }
-
-  
 
   return (
     <div className="containerStyle">

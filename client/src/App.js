@@ -6,7 +6,7 @@ import Alert from "./layout/Alert";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import './App.css'
-
+import ChooseAction from './components/SawoLogIn/ChooseAction';
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
@@ -33,11 +33,13 @@ const App = () => {
         <Switch>
           {/* <Route exact path="/" component={Home} /> */}
           {/* <Route exact path="/login" component={login} /> */}
-          <Route exact path="/" component={login} />
-          <Route exact path="/register" component={register} />
-          <Route  path="/artists" component={artists} />
-          <Route exact path="/music" component={Music} />
-          <Route exact path="/loginSawo" component={LoginPage} />
+          <Route  exact path="/" component={login} />
+          <Route  exact path="/register" component={register} />
+          <Route  path="/artists" component={artists} />  
+          <Route  exact path="/loginSawo" component={LoginPage} />
+          <Route  path="/loginSawo/choose-action" component={ChooseAction} />
+          <Route  path="/music" component={Music} />
+          
         </Switch>
       </BrowserRouter>
     </Provider>
