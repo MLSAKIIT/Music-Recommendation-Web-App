@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Music from './components/Music-Library/Music';
+// import Music from './components/Music-Library/Music';
 import login from "./auth/login";
 import register from "./auth/register";
 import Alert from "./layout/Alert";
@@ -38,7 +38,7 @@ const App = () => {
           <Route component={artists} path="/artists"  />   
           <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
-          <Route  path="/music" component={Music}  />
+          {/* <Route  path="/music" component={Music}  /> */}
         </Switch>
       </BrowserRouter>
     </Provider>

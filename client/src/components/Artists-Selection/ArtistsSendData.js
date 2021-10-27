@@ -23,7 +23,7 @@ function ArtistsSendData(props)
 return(
 
 <div style={{display:"flex",flexDirection:"row",alignItems:"flex-end",justifyContent:"flex-end",paddingRight:"4px"}}>
-<Link to="/music">
+<Link to="/library">
 <button onClick={senddata} className="sendbtn" >
     
  I've selected all my favourite ones

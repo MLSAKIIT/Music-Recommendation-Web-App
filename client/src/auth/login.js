@@ -28,7 +28,7 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/music" />;
+    return <Redirect to="/library" />;
   }
 
   return (
