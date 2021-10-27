@@ -9,6 +9,10 @@
 }
 .searchBar::placeholder {
   color: red;
+  background-color: white ;
+}
+.searchBar:focus::placeholder{
+  transform: none;
 }
 .searchBar:hover {
   border-bottom: 3px solid #2ee59d;

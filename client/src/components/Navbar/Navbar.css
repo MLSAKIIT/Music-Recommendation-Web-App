@@ -34,7 +34,7 @@ body {
   /* border: 2px solid yellow; */
 }
 .navbar .container {
-  padding: auto 0;
+  margin-left: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
