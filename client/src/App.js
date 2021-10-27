@@ -14,28 +14,29 @@ import setAuthToken from "./utils/setAuthToken";
 import artists from './components/Artists-Selection/Artists';
 import LoginPage from './components/SawoLogIn/SawoLogIn';
 import PrivateRoute from './auth/private-route';
+import Library from './components/Library/Library';
 
-
-if(localStorage.token) {
-  setAuthToken(localStorage.token)
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
 }
 
 const App = () => {
   useEffect(() => {
-    store.dispatch(loadUser())
+    store.dispatch(loadUser());
   }, []);
 
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <Navbar />
-      
-      <Alert />
+        <Navbar />
+
+        <Alert />
         <Switch>
           <Route  exact path="/" component={login} />
           <Route  exact path="/register" component={register} />
           <Route  exact path="/loginSawo" component={LoginPage} />
-          <PrivateRoute component={artists} path="/artists" auth={localStorage.token} />     
+          <PrivateRoute component={artists} path="/artists" auth={localStorage.token} />   
+          <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
           <PrivateRoute  path="/music" component={Music} auth={localStorage.token} />
         </Switch>

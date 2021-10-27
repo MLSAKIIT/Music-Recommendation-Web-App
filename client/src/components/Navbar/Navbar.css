@@ -34,7 +34,7 @@ body {
   /* border: 2px solid yellow; */
 }
 .navbar .container {
-  padding: auto 0;
+  margin-left: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,10 +48,11 @@ body {
   justify-content: space-between;
 }
 .navbar a {
-  color: rgb(231, 15, 15);
+  color: red;
   padding: 0 1em;
   margin: 0 0.25rem;
   font-size: larger;
+  transition: 0.4s all;
 }
 .navbar a:hover {
   /* color: var(--primary-color); */

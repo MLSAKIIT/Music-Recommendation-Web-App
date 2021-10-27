@@ -1,0 +1,19 @@
+.searchBar {
+  height: 45px;
+  width: 30%;
+  margin: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #2ee59d;
+  transition: all 0.4s;
+}
+.searchBar::placeholder {
+  color: red;
+  background-color: white ;
+}
+.searchBar:focus::placeholder{
+  transform: none;
+}
+.searchBar:hover {
+  border-bottom: 3px solid #2ee59d;
+}

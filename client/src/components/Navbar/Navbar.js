@@ -6,9 +6,7 @@ import { connect } from "react-redux";
 import { logout } from "../../actions/auth";
 import "./Navbar.css";
 
-
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
-
   const authLinks = (
     <ul className="navbar-nav ml-auto">
       <li className="nav-item">
@@ -31,7 +29,6 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
       </li>
     </ul>
   );
-
 
   return (
     <>
