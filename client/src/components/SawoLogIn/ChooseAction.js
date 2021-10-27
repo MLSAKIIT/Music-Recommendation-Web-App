@@ -24,7 +24,7 @@ export default function ListDividers() {
       </ListItem>
       <Divider />
       <ListItem button divider>
-      <Button variant="outlined" href="/music" style={{textAlign:"center",backgroundColor:"black",color:"red"}}>no? LET'S Listen to some songs then</Button>
+      <Button variant="outlined" href="/library" style={{textAlign:"center",backgroundColor:"black",color:"red"}}>no? LET'S Listen to some songs then</Button>
       </ListItem>
     </List>
     </div>
