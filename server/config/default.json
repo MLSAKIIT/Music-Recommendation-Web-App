@@ -1,4 +1,4 @@
 {
-     "mongoDB": "mongodb+srv://sayantan:abcde@cluster0.h3v8y.mongodb.net/musicApp?retryWrites=true&w=majority",
+     "mongoDB": "mongodb+srv://sayantan:abcde@cluster0.h3v8y.mongodb.net/musicApp?",
      "jwtSecret": "mysecrettoken"
 }

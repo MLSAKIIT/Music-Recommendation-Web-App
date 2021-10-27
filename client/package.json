@@ -6,6 +6,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@mui/icons-material": "^5.0.3",
     "@mui/material": "^5.0.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -25,6 +26,7 @@
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
+    "sawo": "^1.0.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
