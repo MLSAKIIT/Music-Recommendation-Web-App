@@ -13,6 +13,7 @@ import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import artists from './components/Artists-Selection/Artists';
 import LoginPage from './components/SawoLogIn/SawoLogIn';
+import PrivateRoute from './auth/private-route';
 
 
 if(localStorage.token) {
@@ -31,15 +32,12 @@ const App = () => {
       
       <Alert />
         <Switch>
-          {/* <Route exact path="/" component={Home} /> */}
-          {/* <Route exact path="/login" component={login} /> */}
           <Route  exact path="/" component={login} />
           <Route  exact path="/register" component={register} />
-          <Route  path="/artists" component={artists} />  
           <Route  exact path="/loginSawo" component={LoginPage} />
+          <PrivateRoute component={artists} path="/artists" auth={localStorage.token} />     
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
-          <Route  path="/music" component={Music} />
-          
+          <PrivateRoute  path="/music" component={Music} auth={localStorage.token} />
         </Switch>
       </BrowserRouter>
     </Provider>

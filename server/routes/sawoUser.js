@@ -71,7 +71,7 @@ router.post(
           }
         );
       } else {
-        console.log('registering new user');
+        console.log('Registering new user');
         const avatar = gravatar.url(email, {
             s: "200",
             r: "pg",
@@ -110,14 +110,14 @@ router.post(
               res.json({ token });
             }
           );
-      }
-
-      
+      }    
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server error");
     }
   }
 );
+
+//add a get route to the sawoUser then we can get hold of the data whether the user was previously logged in or not.
 
 module.exports = router;

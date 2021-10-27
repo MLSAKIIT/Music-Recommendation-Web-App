@@ -43,6 +43,7 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   
 
   if (isAuthenticated) {
+
     return <Redirect to="/loginSawo/choose-action" />;
   }
 
