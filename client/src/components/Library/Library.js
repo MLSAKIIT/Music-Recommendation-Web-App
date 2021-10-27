@@ -12,3 +12,8 @@ const Library = () => {
 };
 
 export default Library;
+
+/*
+git pull origin main
+git push origin <branch>
+*/
