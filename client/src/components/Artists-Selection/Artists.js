@@ -16,6 +16,7 @@ function Artists() {
         return prevState.filter((i) => i !== id);
       });
     }
+    console.log(AR);
   };
 
   let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
