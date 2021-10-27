@@ -15,15 +15,16 @@ const style = {
 };
 
 export default function ListDividers() {
+
   return (
     <div className='container-fluid' style={{display:"flex",justifyContent:"center",alignItems:"center" ,paddingTop:"10%"}}>
     <List alignItems="center" sx={style} component="nav" aria-label="mailbox folders">
       <ListItem button>
-        <Button variant="outlined" href="/artists" style={{textAlign:"center"}}> first time visit? Choose your favourite artists here</Button>
+        <Button variant="outlined" href="/artists" style={{textAlign:"center" ,backgroundColor:"black",color:"red"}}> first time visit? Choose your favourite artists here</Button>
       </ListItem>
       <Divider />
       <ListItem button divider>
-      <Button variant="outlined" href="/music" style={{textAlign:"center"}}>no? LET'S Listen to some songs then</Button>
+      <Button variant="outlined" href="/music" style={{textAlign:"center",backgroundColor:"black",color:"red"}}>no? LET'S Listen to some songs then</Button>
       </ListItem>
     </List>
     </div>
