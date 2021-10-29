@@ -60,6 +60,7 @@ font-family: 'Raleway', Helvetica, Arial, sans-serif;
   transition: all 0.4s;
   opacity: 0.6;
   font-size: 20px;
+  text-align: left;
 }
 
 .content ul li a:hover {
