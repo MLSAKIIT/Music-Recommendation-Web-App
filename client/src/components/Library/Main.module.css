@@ -1,23 +1,35 @@
 .searchBar {
-  height: 30px;
-  width: 30%;
-  margin-top: 25px;
  
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 20rem;
+  height: 2rem;
+  padding: 0 1rem; 
+  border: 2px solid rgb(22, 21, 21);
+  border-radius: 50px;
+  transition: transform 0.1s ease-in-out;
   outline: none;
-border: none;
   transition: all 0.4s;
+  box-shadow: 4px 0 1px rgba(243, 238, 238, 0.5), -4px 0 1px rgba(7, 7, 22, 0.5);
 
 }
+
 .searchBar::placeholder {
-  padding-left: 30px;
-  color: red;
+
+  color: #a1a1a1;
   background-color: white ;
 }
 .searchBar:focus::placeholder{
-  transform: none;
+  text-indent: -999px
   
 }
-.searchBar:hover {
-  border: 2px dashed rgb(22, 21, 21);
- border-radius: 50px;
+.searchBar:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
 }
+
+.searchInputWrapper {
+  position: relative;
+}
+

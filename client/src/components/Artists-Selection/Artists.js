@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import artistsName from "../../data/artists"
 import Button from "./ArtistsButton";
-import './ArtistsButton.css'
+import classes from './ArtistsButton.module.css'
 import ArtistsSendData from './ArtistsSendData';
 
 function Artists() {
@@ -43,13 +43,13 @@ function Artists() {
   console.log(AR);
   return (
     <div  >
-        <h1 className="heading" >CHOOSE YOUR FAVOURITE ARTISTS 
+        <h1 className={classes.heading} >CHOOSE YOUR FAVOURITE ARTISTS 
         <ArtistsSendData data={AR} />
        </h1>
        
-        <div className="searchbtn">
+        <div className={classes.searchbtn}>
             
-        <input className="searchInput" type="text" name="search" placeholder="Search.." onChange={(event)=>{
+        <input className={classes.searchInput} type="text" name="search" placeholder="Search.." onChange={(event)=>{
           setSearchTerm(event.target.value);  
         }}/>
        </div>
