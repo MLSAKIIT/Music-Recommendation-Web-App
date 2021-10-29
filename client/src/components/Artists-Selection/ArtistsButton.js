@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './ArtistsButton.css'
+import classes from'./ArtistsButton.module.css'
 
 const Button = (props) => {
   const [isActive, setIsActive] = useState(true);
@@ -7,10 +7,10 @@ const Button = (props) => {
     setIsActive((prev) => !prev);
     props.onclick(props.id, isActive);
   };
- 
+
   return (
     
-    <button onClick={idSendHandler}  className={`${isActive ? "notselected" : "selected"}`}>
+    <button onClick={idSendHandler}  className={`${isActive ? classes.notselected : classes.selected}`}>
       {props.title}
     </button>
 
