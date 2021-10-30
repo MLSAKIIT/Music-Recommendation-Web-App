@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");  
+ * {  
+  outline: none;  
+  box-sizing: border-box;  
+ }  
+ body{
+   background-color: #1d3536;
+ }
+ .musicContainer {  
+  background-color: #fff;
+  background-color: #1d3536;  
+  border-radius: 15px;  
+  box-shadow: 0 20px 20px 0 rgba(97, 96, 96, 0.6);  
+  box-shadow: 0 0px 20px 0  rgba(14, 13, 13, 0.6);  
+  display: flex;  
+  padding: 10px 20px;  
+  margin:  0px auto;
+  height: 45%;
+  position: relative;  
+  z-index: 10;  
+  width: 98vw;
+ }  
+ .imgContainer {  
+  position: relative;  
+  width: 110px;  
+ }  
+ .imgContainer::after {  
+  content: "";  
+  background-color: #fff;  
+  border-radius: 50%;  
+  position: absolute;  
+  bottom: 86%;  
+  left: 50%;  
+  width: 20px;  
+  height: 20px;  
+  transform: translate(-40%, 40%);  
+  box-shadow: 0 0 0px 10px #000;  
+ }  
+ .imgContainer img {  
+  border-radius: 50%;  
+  object-fit: cover;  
+  height: 110px;  
+  width: inherit;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  animation: rotate 4s linear infinite;  
+  /* animation-play-state: paused;  */
+  box-shadow: 0 5px 20px 0  rgba(0, 0, 0, 0.6);   
+ }  
+ .musicContainer.play .img-Container img {  
+  animation-play-state: running;  
+ }  
+ @keyframes rotate {  
+  from {  
+   transform: rotate(0deg);  
+  }  
+  to {  
+   transform: rotate(360deg);  
+  }  
+ }  
+ .navigation {  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  z-index: 1;  
+  width: 80%;
+ }  
+ .actionBtn {  
+  background-color: #fff;  
+  background-color: #1d3536; 
+  border: 0;  
+  color: #d4373e;;
+  font-size: 25px;  
+  cursor: pointer;  
+  padding: 10px;  
+  margin: 0 15px;  
+ }  
+ .actionBtn i:hover{
+   color:  #dfdbdf;
+   transition: 0.35s;
+  box-shadow: 20 20px 20px 20  rgba(14, 13, 13, 0.6);  
+ }
+ .actionBtn.actionBtnBig {  
+  color: #cdc2d0; 
+  color: #000;
+  background-color: #1d3536;
+  font-size: 30px;  
+ }  
+ .musicInfo {  
+  background-color: rgba(255, 255, 255, 0.5);  
+  width: calc(100% - 40px);  
+  padding: 10px 10px 10px 150px;  
+  border-radius: 15px 15px 0px 0px;  
+  position: absolute;  
+  top: 0;  
+  left: 20px;  
+  opacity: 0;  
+  transform: translateY(0%);  
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;  
+  z-index: 0;  
+ }  
+ .musicContainer.play .musicInfo {  
+  opacity: 1;  
+  transform: translateY(-100%);  
+ }  
+ .musicInfo h4 {  
+  margin: 0;  
+ }  
+ .progressContainer {  
+  background-color: #fff;  
+  border: 5px;  
+  cursor: pointer;  
+  margin: 10px 0;  
+  height: 4px;  
+  width: 100%;  
+ }  
+ .progress {  
+  background-color: #fe8daa; 
+  border-radius: 5px;  
+  height: 100%;  
+  width: 0%;  
+  transform: width 0.1s linear;  
+ }  

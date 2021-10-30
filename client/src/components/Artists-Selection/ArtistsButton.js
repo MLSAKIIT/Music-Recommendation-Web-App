@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './ArtistsButton.css'
+import classes from'./ArtistsButton.module.css'
 
 const Button = (props) => {
   const [isActive, setIsActive] = useState(true);

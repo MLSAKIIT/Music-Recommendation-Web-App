@@ -1,8 +1,18 @@
 .library {
-  height: 100vh;
+  height: 100%;
+  height: auto;
   width: 100%;
-  display: grid;
-  grid-template-columns: 300px auto;
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  height: auto;
+}
+.content{
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
 }
 .main {
   padding-left: 1rem;

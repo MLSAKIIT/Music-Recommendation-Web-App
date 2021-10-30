@@ -58,7 +58,7 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
           <div className="loggedin">
             <h2>User Successful Login</h2>
             <div>You are redirecting to music page</div>
-            <p>If you are not Redirected, then <Link to = '/music'>Click Here</Link></p>
+            <p>If you are not Redirected, then <Link to = "/library">Click Here</Link></p>
           </div>
         )}
       </section>

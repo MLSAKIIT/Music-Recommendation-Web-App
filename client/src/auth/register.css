@@ -98,14 +98,14 @@
   margin: auto;
 }
 
-input::placeholder {
+.form input::placeholder {
   /* background-color: #1d3536; */
   /* color: #d61923; */
   color: white;
   font-size: 18px;
   background-color: #1d3536;
   }
-  input:focus::placeholder {
+ .form input:focus::placeholder {
     /* background-color: #1d3536; */
     color: #d61923;
     font-size: 14px;

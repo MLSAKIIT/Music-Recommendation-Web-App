@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+
 .sideBar {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -9,15 +11,19 @@
       rgba(0, 0, 0, 0.7),
       rgba(240, 10, 10, 0.3)
     ),
-    url(../../images/library-sidebar2.png);
+    url(../../images/library-sidebar3.jpeg);
+    max-width: 100%;
+    display: block;
+    height: auto;
+    background-color: black;
   background-position: 80% center;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 90%; */
+  width: 25%;
   animation: gradient 15s ease-in infinite;
   box-sizing: border-box;
-  padding: 3rem;
-  font-size: 1.5rem;
+  padding-top: 10%;
 }
 /* @keyframes gradient {
   0% {
@@ -31,22 +37,36 @@
   }
 } */
 .sideBar span {
-  color: whitesmoke;
-  font-size: 3rem;
-  font-weight: 600;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  padding-left: 30%;
+  font-size: 30px;
+  background: none;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+  color: white;
+  text-shadow: 4px 0 1px rgba(255,0,0,.5), -4px 0 1px rgba(0,0,255,.5);
+
 }
 .content {
-  margin-top: 5em;
+  /* margin-top: 5em; */
+padding-left: 20%;
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
 }
-.sideBar a {
+.content ul li a {
+  list-style: none;
   display: block;
-  margin-top: 1.5em;
+  padding: 10px;
   color: whitesmoke;
   font-weight: 500;
   transition: all 0.4s;
   opacity: 0.6;
+  font-size: 20px;
+  text-align: left;
 }
-.sideBar a:hover {
+
+.content ul li a:hover {
   color: white;
   opacity: 1;
+  transform: translateX(10%);
+  -webkit-transform:translateX(10%);
 }

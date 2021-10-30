@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Music from './components/Music-Library/Music';
+// import Music from './components/Music-Library/Music';
 import login from "./auth/login";
 import register from "./auth/register";
 import Alert from "./layout/Alert";
@@ -13,7 +13,7 @@ import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import artists from './components/Artists-Selection/Artists';
 import LoginPage from './components/SawoLogIn/SawoLogIn';
-import PrivateRoute from './auth/private-route';
+// import PrivateRoute from './auth/private-route';
 import Library from './components/Library/Library';
 
 if (localStorage.token) {
