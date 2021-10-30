@@ -7,10 +7,14 @@ import MusicList from "./MusicList";
 const Library = () => {
   return (
     <div className={classes.library}>
-      <SideBar />
-      <Main className={classes.main} />
-      <AudioPlayer  />
-      <MusicList/>
+      <div className={classes.row}>
+        <SideBar />
+        <div className={classes.content}>
+          <Main className={classes.main} />
+          <MusicList className={classes.musicList} />
+        </div>
+      </div>
+      <AudioPlayer />
     </div>
   );
 };
