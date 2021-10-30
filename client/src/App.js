@@ -35,10 +35,10 @@ const App = () => {
           <Route  exact path="/" component={login} />
           <Route  exact path="/register" component={register} />
           <Route  exact path="/loginSawo" component={LoginPage} />
-          <PrivateRoute component={artists} path="/artists" auth={localStorage.token} />   
+          <Route component={artists} path="/artists" />   
           <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
-          <PrivateRoute  path="/music" component={Music} auth={localStorage.token} />
+          <Route  path="/music" component={Music} />
         </Switch>
       </BrowserRouter>
     </Provider>

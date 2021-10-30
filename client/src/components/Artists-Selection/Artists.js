@@ -16,8 +16,8 @@ function Artists() {
         return prevState.filter((i) => i !== id);
       });
     }
+    console.log(AR);
   };
-
   let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
   {
       if(searchTerm==="")
@@ -28,7 +28,6 @@ function Artists() {
       }
 
   });
-
   
   let content = an.map((artist) => (
     <Button
@@ -36,10 +35,9 @@ function Artists() {
       title={artist.artists}
       id={artist.id}
       key={artist.id}
+      className = {`${AR != undefined ? AR.includes(artist.id) ? 'selected' : 'notselected' : 'notselected'}`}
     />
   ));
-
-  console.log(AR);
   return (
     <div  >
         <h1 className="heading" >CHOOSE YOUR FAVOURITE ARTISTS 
