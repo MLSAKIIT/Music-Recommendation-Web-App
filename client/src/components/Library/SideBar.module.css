@@ -14,10 +14,11 @@
     url(../../images/library-sidebar3.jpeg);
     max-width: 100%;
     display: block;
-    height: auto;
+    height: 100vh;
     background-color: black;
   background-position: 80% center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
   /* height: 100%;
   width: 90%; */
   width: 25%;

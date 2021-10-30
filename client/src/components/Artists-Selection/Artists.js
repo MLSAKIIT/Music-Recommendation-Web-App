@@ -21,6 +21,7 @@ function Artists() {
 
   let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
   {
+    
       if(searchTerm==="")
       return ar;
       else if(ar.artists.toLowerCase().includes(searchTerm.toLowerCase()))
