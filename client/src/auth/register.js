@@ -9,6 +9,7 @@ import "./register.css";
 import "./login.css"
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import Navbar from './../components/Navbar/Navbar';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -39,6 +40,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="box" >
       <div className="box-left">
         <div className="register-box">
@@ -142,6 +145,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
     </div>
+    </>
   );
 };
 

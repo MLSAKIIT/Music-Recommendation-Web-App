@@ -9,6 +9,7 @@ import "./login.css";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { Container } from "@mui/material";
+import Navbar from './../components/Navbar/Navbar';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -32,6 +33,8 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="box">
       <div className="box-left">
         <div className="login-box">
@@ -102,6 +105,7 @@ const Login = ({ login, isAuthenticated }) => {
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
     </div>
+    </>
   );
 };
 
