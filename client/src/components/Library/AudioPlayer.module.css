@@ -3,20 +3,24 @@
   outline: none;  
   /* box-sizing: border-box;   */
  }  
- /* body{
+ body{
    background-color: #1d3536;
- } */
+ }
  .musicContainer {  
-  background-color: #fff;
   background-color: #1d3536;  
-  box-shadow: 0 20px 20px 0 rgba(97, 96, 96, 0.6);  
+  background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3);
+  background: linear-gradient(218deg, rgba(116,18,118,1) 15%, rgba(32,58,110,1) 75%, rgba(18,31,88,1) 100%);
+  background: linear-gradient(218deg, rgba(32,58,110,1) 15%, rgba(18,31,88,1) 120%);
+  /* box-shadow: 0 20px 20px 0 rgba(97, 96, 96, 0.6);   */
   box-shadow: 0 0px 20px 0  rgba(14, 13, 13, 0.6);  
   display: flex;  
   padding: 10px 20px;  
   position: absolute; 
   top:90%; 
   z-index: 10;  
-  width: 98vw;
+  width: 100vw;
+  border-radius: 10px;
+  margin: 0 auto;
  }  
  .imgContainer {  
   position: relative;  
@@ -31,7 +35,7 @@
   left: 50%;  
   width: 20px;  
   height: 20px;  
-  transform: translate(-40%, 40%);  
+  transform: translate(-40%, 30%);  
   box-shadow: 0 0 0px 10px #000;  
  }  
  .imgContainer img {  
@@ -67,10 +71,11 @@
   width: 80%;
  }  
  .actionBtn {  
-  background-color: #fff;  
   background-color: #1d3536; 
+  background-color: transparent;
   border: 0;  
   color: #d4373e;;
+  color: rgb(194, 192, 192);
   font-size: 25px;  
   cursor: pointer;  
   padding: 10px;  
