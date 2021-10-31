@@ -28,7 +28,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Navbar />
+      
 
         <Alert />
         <Switch>

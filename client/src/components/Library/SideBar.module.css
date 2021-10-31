@@ -1,5 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
-
+ 
+ .appName
+{
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  
+  padding-left: 30%;
+  background: none;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+  color: white;
+  text-shadow: 4px 0 1px rgba(255,0,0,.5), -4px 0 1px rgba(0,0,255,.5);
+  position: relative;
+  margin-bottom: 10px;
+  left:0.5px;
+  top: 10px;
+  
+  /* display: flexbox;
+  align-items:flex-start;
+  justify-content: space-around; */
+} 
 .sideBar {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -12,15 +30,15 @@
       rgba(240, 10, 10, 0.3)
     ),
     url(../../images/library-sidebar3.jpeg);
-    max-width: 100%;
+    width: 20%;
     display: block;
-    height: auto;
+    height: 100vh;
     background-color: black;
   background-position: 80% center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
   /* height: 100%;
   width: 90%; */
-  width: 25%;
   animation: gradient 15s ease-in infinite;
   box-sizing: border-box;
   padding-top: 10%;

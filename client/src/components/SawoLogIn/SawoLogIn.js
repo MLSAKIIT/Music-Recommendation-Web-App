@@ -4,7 +4,7 @@ import { sawoLogin } from "../../actions/auth";
 import { connect } from "react-redux";
 import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import Navbar from "../Navbar/Navbar";
 import "./LoginPage.css";
 
 const API_KEY = "2802c132-cc06-425e-808b-71d17f56626b";
@@ -48,6 +48,8 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="containerStyle">
       <section>
         <h2 className="title">Log in with Sawo</h2>
@@ -63,6 +65,7 @@ const LoginPage = ({ sawoLogin, isAuthenticated }) => {
         )}
       </section>
     </div>
+    </>
   );
 };
 
