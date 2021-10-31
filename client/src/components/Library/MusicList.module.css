@@ -7,12 +7,19 @@
     overflow-y: scroll;
     flex: 1;
     scroll-behavior: smooth;
+    border-radius: 20px;
+    padding-left: 30px;
+   
 }
-.container {
-    display: flex;
-    flex-direction: row;
-    height: 500x;
-  }
+.contentrow
+{
+    background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3);
+    border-radius: 20px;
+}
+/* .container {
+ 
+   
+  } */
   
 .content .title{
     color: #fff;

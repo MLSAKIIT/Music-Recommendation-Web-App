@@ -7,6 +7,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
+import Navbar from '../Navbar/Navbar';
 const style = {
   width: '100%',
   maxWidth: 360,
@@ -17,6 +18,8 @@ const style = {
 export default function ListDividers() {
 
   return (
+    <>
+    <Navbar/>
     <div className='container-fluid' style={{display:"flex",justifyContent:"center",alignItems:"center" ,paddingTop:"10%"}}>
     <List alignItems="center" sx={style} component="nav" aria-label="mailbox folders">
       <ListItem button>
@@ -28,5 +31,6 @@ export default function ListDividers() {
       </ListItem>
     </List>
     </div>
+    </>
   );
 }
