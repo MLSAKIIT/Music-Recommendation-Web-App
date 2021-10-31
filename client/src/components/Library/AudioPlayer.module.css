@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");  
- * {  
-  outline: none;  
-  /* box-sizing: border-box;   */
- }  
- body{
-   background-color: #1d3536;
- }
+  
+
  .musicContainer {  
   background-color: #1d3536;  
   background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3);

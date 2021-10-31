@@ -13,8 +13,9 @@ const Library = () => {
         <div className={classes.content}>
           <Main className={classes.main} />
           <MusicList className={classes.musicList} />
+          
         </div>
-          {/* <Other/> */}
+         
       </div>
       <AudioPlayer />
     </div>

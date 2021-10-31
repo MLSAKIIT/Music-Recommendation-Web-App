@@ -38,7 +38,7 @@ const App = () => {
           <Route component={artists} path="/artists" />   
           <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
-          <Route  path="/music" component={Music} />
+          
         </Switch>
       </BrowserRouter>
     </Provider>
