@@ -29,7 +29,9 @@ const AudioPlayer = () => {
     }
     return (
         <>
+          
             <div className={classes.musicContainer} id="music-container">
+            
                 <div className={classes.musicInfo}>
                     <h4 className={classes.title} id="title"></h4>
                     <div className={classes.progressContainer} id="progress-container">
