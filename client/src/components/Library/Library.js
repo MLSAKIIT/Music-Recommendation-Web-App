@@ -3,6 +3,7 @@ import SideBar from "./SideBar";
 import Main from "./Main";
 import AudioPlayer from "./AudioPlayer";
 import MusicList from "./MusicList";
+import Other from "./Other";
 
 const Library = () => {
   return (
@@ -13,6 +14,7 @@ const Library = () => {
           <Main className={classes.main} />
           <MusicList className={classes.musicList} />
         </div>
+          {/* <Other/> */}
       </div>
       <AudioPlayer />
     </div>

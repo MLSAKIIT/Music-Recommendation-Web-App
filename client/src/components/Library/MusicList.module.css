@@ -1,6 +1,6 @@
 .content{
     width: 55%;
-    height: 30%;
+    height: 31.8%;
     padding: 5px;
     margin-top: 10px;
     flex-direction: column;
@@ -13,7 +13,7 @@
 }
 .contentrow
 {
-    background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3);
+    /* background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3); */
     border-radius: 20px;
 }
 /* .container {
@@ -30,17 +30,23 @@
     display: flex;
     justify-content: space-between;
     color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    /* box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     /* border-radius: 10px; */
     padding: 15px;
-    margin: 4px;
+    margin: 5px;
 }
 .music_row:hover{
-    background-color: #d4373e;
-    transition: 0.3s;
+    /* background-color: #d4373e; */
+    box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px; 
+    transition: 0.25s;
     cursor: pointer;
 }
 .music_row p{
     margin: auto 0;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }

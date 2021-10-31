@@ -11,20 +11,20 @@ const AudioPlayer = () => {
     const mc = document.getElementById("music-container")
     const play = document.getElementById("play");
     const pause = document.getElementById("pause");
-    const[playing,setPlay]=useState(false);
-    
+    const [playing, setPlay] = useState(false);
+
 
     const playSong = () => {
         setPlay(true);
-       
-    // musicContainer.classList.add("play");
-    // playBtn.querySelector("i.fa").classList.remove("fa-play");
-    // playBtn.querySelector("i.fa").classList.add("fa-pause");
-     document.getElementById("audio").play();
+
+        // musicContainer.classList.add("play");
+        // playBtn.querySelector("i.fa").classList.remove("fa-play");
+        // playBtn.querySelector("i.fa").classList.add("fa-pause");
+        document.getElementById("audio").play();
     }
     const pauseSong = () => {
         setPlay(false);
-      
+
         document.getElementById("audio").pause();
     }
     return (
@@ -47,15 +47,15 @@ const AudioPlayer = () => {
                         <i className="fa fa-backward" aria-hidden="true"></i>
                     </button>
 
-                 {playing? <button id="pause" className={classes.actionBtn}>
+                    {playing ? <button id="pause" className={classes.actionBtn}>
                         {/* , classes.actionBtnBig */}
                         <i className="fa fa-pause" onClick={pauseSong} aria-hidden="true"></i>
-                    </button>:<button id="play" onClick={playSong} className={classes.actionBtn}>
-                       
-                       <i className="fa fa-play"  aria-hidden="true"></i>
-                   </button>}
-                   
-                    
+                    </button> : <button id="play" onClick={playSong} className={classes.actionBtn}>
+
+                        <i className="fa fa-play" aria-hidden="true"></i>
+                    </button>}
+
+
 
                     <button id="next" className={classes.actionBtn}>
                         <i className="fa fa-forward" aria-hidden="true"></i>
