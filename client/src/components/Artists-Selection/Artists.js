@@ -4,6 +4,7 @@ import artistsName from "../../data/artists"
 import Button from "./ArtistsButton";
 import classes from './ArtistsButton.module.css'
 import ArtistsSendData from './ArtistsSendData';
+import Navbar from './../Navbar/Navbar';
 
 function Artists() {
     const[searchTerm,setSearchTerm]=useState('');
@@ -43,7 +44,9 @@ function Artists() {
 
   console.log(AR);
   return (
+   
     <div  >
+       <Navbar />
         <h1 className={classes.heading} >CHOOSE YOUR FAVOURITE ARTISTS 
         <ArtistsSendData data={AR} />
        </h1>

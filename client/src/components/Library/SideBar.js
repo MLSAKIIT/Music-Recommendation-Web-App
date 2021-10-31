@@ -4,7 +4,9 @@ import Divider from '@mui/material/Divider';
 
 const SideBar = () => {
   return (
+  
     <div className={classes.sideBar}>
+        <h1 className={classes.appName}>μ-seak</h1>
       <span>Library</span>
       <div className={classes.content}>
     

@@ -10,7 +10,7 @@ const MusicList = () => {
   var seconds = ((millis % 60000) / 1000).toFixed(0);
   return minutes + ":" + (seconds < 10 ? '0' : '') + seconds; */}
   <div className='container'>
-  <h2 className={classes.title} style={{color:"white" ,paddingTop:"20px"}}>[Specialized Playlist]</h2>
+  <h2 className={classes.title} style={{color:"white" ,alignItems:"flex-start" ,justifyContent:"flex-start",paddingTop:"25px"}}>[Specialized Playlist]</h2>
             <div className={classes.content} ref={titleRef}>
              
                 {songs.map((music) => (
