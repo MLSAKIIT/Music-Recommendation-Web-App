@@ -7,10 +7,10 @@ const Button = (props) => {
     setIsActive((prev) => !prev);
     props.onclick(props.id, isActive);
   };
-
+ const parentClasses = props.className;
   return (
     
-    <button onClick={idSendHandler}  className={`${isActive ? classes.notselected : classes.selected}`}>
+    <button onClick={idSendHandler}  className={parentClasses}>
       {props.title}
     </button>
 
