@@ -4,6 +4,7 @@ import artistsName from "../../data/artists"
 import Button from "./ArtistsButton";
 import classes from './ArtistsButton.module.css'
 import ArtistsSendData from './ArtistsSendData';
+import Navbar from './../Navbar/Navbar';
 
 function Artists() {
     const[searchTerm,setSearchTerm]=useState('');
@@ -21,6 +22,7 @@ function Artists() {
 
   let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
   {
+    
       if(searchTerm==="")
       return ar;
       else if(ar.artists.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -42,7 +44,9 @@ function Artists() {
 
   console.log(AR);
   return (
+   
     <div  >
+       <Navbar />
         <h1 className={classes.heading} >CHOOSE YOUR FAVOURITE ARTISTS 
         <ArtistsSendData data={AR} />
        </h1>

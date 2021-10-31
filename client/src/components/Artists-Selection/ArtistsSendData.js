@@ -10,8 +10,6 @@ function ArtistsSendData(props)
         try
         {
              axios.post('http://localhost:1821/artists',{array:props.data});
-                
-            
         }
         catch(err)
         {

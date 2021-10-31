@@ -1,9 +1,10 @@
 .library {
-  height: 100%;
-  height: auto;
+  background-color: #1d3536;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
 }
 .row{
   display: flex;

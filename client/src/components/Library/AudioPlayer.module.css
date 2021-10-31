@@ -1,22 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");  
  * {  
   outline: none;  
-  box-sizing: border-box;  
+  /* box-sizing: border-box;   */
  }  
- body{
+ /* body{
    background-color: #1d3536;
- }
+ } */
  .musicContainer {  
   background-color: #fff;
   background-color: #1d3536;  
-  border-radius: 15px;  
   box-shadow: 0 20px 20px 0 rgba(97, 96, 96, 0.6);  
   box-shadow: 0 0px 20px 0  rgba(14, 13, 13, 0.6);  
   display: flex;  
   padding: 10px 20px;  
-  margin:  0px auto;
-  height: 45%;
-  position: relative;  
+  position: absolute; 
+  top:90%; 
   z-index: 10;  
   width: 98vw;
  }  
@@ -59,8 +57,10 @@
    transform: rotate(360deg);  
   }  
  }  
- .navigation {  
+ .navigation { 
+    
   display: flex;  
+  flex-direction: row;
   align-items: center;  
   justify-content: center;  
   z-index: 1;  
