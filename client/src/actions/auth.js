@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { setAlert } from './alert';
 import setAuthToken from '../utils/setAuthToken';
+import api from '../utils/api';
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -13,11 +14,9 @@ import {
 
 // Load User
 export const loadUser = () => async dispatch => {
-  if(localStorage.token) {
-    setAuthToken(localStorage.token)
-  }
+  
   try {
-    const res = await axios.get('http://localhost:1821/api/auth');
+    const res = await api.get('/auth');
     console.log(res);
     dispatch({
       type: USER_LOADED,
@@ -145,7 +144,7 @@ export const sawoLogin = (name, email, password) => async dispatch => {
       payload: res.data
     });
 
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (err) {
     console.log(err);
     const errors = err.response.data.errors;

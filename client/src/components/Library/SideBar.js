@@ -1,12 +1,12 @@
 import classes from "./SideBar.module.css";
 import Divider from '@mui/material/Divider';
-
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
   
     <div className={classes.sideBar}>
-        <h1 className={classes.appName}>μ-seak</h1>
+        <Link to='/'><h1 className={classes.appName}>μ-seak</h1></Link>
       <span>Library</span>
       <div className={classes.content}>
     
