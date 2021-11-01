@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { login } from "../actions/auth";
 import bgImage from "./register.jpg";
 import "./register.css";
 import "./login.css";
@@ -11,7 +8,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { Container } from "@mui/material";
 import Navbar from './../components/Navbar/Navbar';
 
-const LoginNew = ({ login, isAuthenticated }) => {
+const LoginNew = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -109,13 +106,5 @@ const LoginNew = ({ login, isAuthenticated }) => {
   );
 };
 
-Login.propTypes = {
-  login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
-};
-
-const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
-});
 
 export default LoginNew
