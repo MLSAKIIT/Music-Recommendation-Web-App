@@ -19,6 +19,7 @@ function Artists() {
     }
     console.log(AR);
   };
+  
   let an = artistsName.filter((ar) => ar.id <=500 ).filter((ar)=>
   {
     
@@ -30,14 +31,16 @@ function Artists() {
       }
 
   });
-  
+
   let content = an.map((artist) => (
+ 
     <Button
       onclick={onclickHandler}
       title={artist.artists}
       id={artist.id}
       key={artist.id}
-      className = {`${AR != undefined ? AR.includes(artist.id) ? 'selected' : 'notselected' : 'notselected'}`}
+ 
+      className = {`${ AR !==null? AR.includes(artist.id) ? classes.selected : classes.notselected : classes.notselected}`}
     />
   ));
   return (

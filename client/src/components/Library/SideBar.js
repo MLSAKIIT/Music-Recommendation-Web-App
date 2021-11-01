@@ -6,16 +6,16 @@ const SideBar = () => {
   return (
   
     <div className={classes.sideBar}>
-        <h1 className={classes.appName}>μ-seak</h1>
+        {/* <h1 className={classes.appName}>μ-seak</h1> */}
       <span>Library</span>
       <div className={classes.content}>
     
         <ul>
-          <li><a href="/home">Home</a></li>
+          <li><a href="/library">Home</a></li>
           <Divider />
           <li><a href="/playlist">Playlist</a></li>
           <Divider />
-          <li> <a href="/artists">Artist</a></li>
+          <li> <a href="/ArtistsSearch">Artist</a></li>
           <Divider   />
           <li><a href="/favourite">Favourite</a> </li>
           <Divider   />
