@@ -22,12 +22,12 @@ const LoginNew = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    login(email, password);
+    console.log('submitted');
   };
 
-  if (isAuthenticated) {
-    return <Redirect to="/library" />;
-  }
+  // if (isAuthenticated) {
+  //   return <Redirect to="/library" />;
+  // }
 
   return (
     <>

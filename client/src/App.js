@@ -15,6 +15,7 @@ import artists from './components/Artists-Selection/Artists';
 import LoginPage from './components/SawoLogIn/SawoLogIn';
 // import PrivateRoute from './auth/private-route';
 import Library from './components/Library/Library';
+import LoginNew from './components/authNew/loginNew';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -38,6 +39,7 @@ const App = () => {
           <Route component={artists} path="/artists" />   
           <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
+          <Route path='/loginNew' component={LoginNew}
           
         </Switch>
       </BrowserRouter>
