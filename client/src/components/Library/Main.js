@@ -49,12 +49,9 @@ catch(err)
       
       <input className={classes.searchBar} 
       placeholder="Search for any tracks here" 
-      onKeyDown={handlesubmit}
-      
+      onKeyDown={handlesubmit}  
       />
-    
       </div>  
-
      {show?
      <div>
     <ImageList sx={{ width: 700, height: 1000 ,padding:"20px"}}>
@@ -69,7 +66,7 @@ catch(err)
           />
           <ImageListItemBar sx={{color:"white"}}
             title={item.name}
-            subtitle={<span>by: {item.artist}</span>}
+            subtitle={<span>By : {item.artist}</span>}
             position="below"
           />
         </ImageListItem>

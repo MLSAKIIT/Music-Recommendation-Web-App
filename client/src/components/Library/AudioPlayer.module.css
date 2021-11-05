@@ -4,8 +4,9 @@
  .musicContainer {  
   background-color: #1d3536;  
   background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3);
-  background: linear-gradient(218deg, rgba(116,18,118,1) 15%, rgba(32,58,110,1) 75%, rgba(18,31,88,1) 100%);
-  background: linear-gradient(218deg, rgba(32,58,110,1) 15%, rgba(18,31,88,1) 120%);
+  /* background: linear-gradient(218deg, rgba(116,18,118,1) 15%, rgba(32,58,110,1) 75%, rgba(18,31,88,1) 100%); */
+  /* background: linear-gradient(218deg, rgba(32,58,110,1) 15%, rgba(18,31,88,1) 120%); */
+  background: linear-gradient(218deg, rgb(22, 44, 87) 15%, rgb(12, 22, 63) 120%);
   /* box-shadow: 0 20px 20px 0 rgba(97, 96, 96, 0.6);   */
   box-shadow: 0 0px 20px 0  rgba(14, 13, 13, 0.6);  
   display: flex;  
@@ -14,7 +15,8 @@
   top:90%; 
   z-index: 10;  
   width: 100vw;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-radius: 15px 15px 0 0;
   margin: 0 auto;
  }  
  .imgContainer {  
