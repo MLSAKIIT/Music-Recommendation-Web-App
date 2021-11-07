@@ -16,7 +16,8 @@ import LoginPage from './components/SawoLogIn/SawoLogIn';
 // import PrivateRoute from './auth/private-route';
 import Library from './components/Library/Library';
 import Searchresults from './components/Library/Searchresults';
-// import ArtistsSearch from './components/Library/ArtistsSearch';
+
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -40,7 +41,7 @@ const App = () => {
           <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
           <Route path="/SearchResult" component={Searchresults}/>
-          {/* <Route path="/ArtistsSearch" component={ArtistsSearch}/> */}
+       
 
         </Switch>
       </BrowserRouter>

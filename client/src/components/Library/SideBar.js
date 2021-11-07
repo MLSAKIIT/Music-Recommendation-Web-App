@@ -13,8 +13,8 @@ const SideBar = () => {
         <ul>
           <li><a href="/library">Home</a></li>
           <Divider />
-          <li><a href="/playlist">Playlist</a></li>
-          <Divider />
+          {/* <li><a href="/playlist">Playlist</a></li>
+          <Divider /> */}
           <li> <a href="/ArtistsSearch">Artist</a></li>
           <Divider   />
           <li><a href="/favourite">Favourite</a> </li>
