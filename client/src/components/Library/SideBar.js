@@ -4,21 +4,23 @@ import Divider from '@mui/material/Divider';
 
 const SideBar = () => {
   return (
-  
+
     <div className={classes.sideBar}>
-        {/* <h1 className={classes.appName}>μ-seak</h1> */}
-      <span>Library</span>
+      <div className={classes.logo}>
+        <h1 className={classes.appName}>μ-seak</h1>
+      </div>
+      {/* <span>Library</span> */}
       <div className={classes.content}>
-    
+
         <ul>
-          <li><a href="/library">Home</a></li>
-          <Divider />
-          {/* <li><a href="/playlist">Playlist</a></li>
-          <Divider /> */}
-          <li> <a href="/ArtistsSearch">Artist</a></li>
-          <Divider   />
-          <li><a href="/favourite">Favourite</a> </li>
-          <Divider   />
+          <li><a href="/library"><i class="fas fa-home"></i> Home</a></li>
+          {/* <Divider /> */}
+          <li><a href="/playlist"><i class="fas fa-music"></i> Playlist</a></li>
+          {/* <Divider /> */}
+          <li> <a href="/ArtistsSearch"><i class="fas fa-user"></i> Artist</a></li>
+          {/* <Divider /> */}
+          <li><a href="/favourite"><i class="fas fa-heart"></i> Favourite</a> </li>
+          {/* <Divider /> */}
         </ul>
         {/* <a href="/home">Home</a>
         <a href="/playlist">Playlist</a>
