@@ -15,8 +15,10 @@ import artists from './components/Artists-Selection/Artists';
 import LoginPage from './components/SawoLogIn/SawoLogIn';
 // import PrivateRoute from './auth/private-route';
 import Library from './components/Library/Library';
-import LoginNew from './components/authNew/loginNew';
-
+import Searchresults from './components/Library/Searchresults';
+import ArtistsSearch from './components/Library/ArtistsSearch';
+import Playlist from './components/Library/Playlist';
+import Favourite from './components/Library/Favourite';
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -39,8 +41,11 @@ const App = () => {
           <Route component={artists} path="/artists" />   
           <Route exact path="/library" component={Library} />  
           <Route  path="/loginSawo/choose-action" component={ChooseAction} />
-          <Route path='/loginNew' component={LoginNew}
-          
+          <Route path="/SearchResult" component={Searchresults}/>
+          <Route path="/ArtistsSearch" component={ArtistsSearch}/>
+          <Route path="/Playlist" component={Playlist}/>
+          <Route path="/Favourite" component={Favourite}/>
+
         </Switch>
       </BrowserRouter>
     </Provider>

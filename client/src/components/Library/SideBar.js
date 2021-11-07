@@ -4,21 +4,23 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
-  
+
     <div className={classes.sideBar}>
-        <Link to='/'><h1 className={classes.appName}>μ-seak</h1></Link>
-      <span>Library</span>
+      <div className={classes.logo}>
+        <h1 className={classes.appName}>μ-seak</h1>
+      </div>
+      {/* <span>Library</span> */}
       <div className={classes.content}>
-    
+
         <ul>
-          <li><a href="/home">Home</a></li>
-          <Divider />
-          <li><a href="/playlist">Playlist</a></li>
-          <Divider />
-          <li> <a href="/artists">Artist</a></li>
-          <Divider   />
-          <li><a href="/favourite">Favourite</a> </li>
-          <Divider   />
+          <li><a href="/library"><i class="fas fa-home"></i> Home</a></li>
+          {/* <Divider /> */}
+          <li><a href="/playlist"><i class="fas fa-music"></i> Playlist</a></li>
+          {/* <Divider /> */}
+          <li> <a href="/ArtistsSearch"><i class="fas fa-user"></i> Artist</a></li>
+          {/* <Divider /> */}
+          <li><a href="/favourite"><i class="fas fa-heart"></i> Favourite</a> </li>
+          {/* <Divider /> */}
         </ul>
         {/* <a href="/home">Home</a>
         <a href="/playlist">Playlist</a>

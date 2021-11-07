@@ -1,51 +1,110 @@
+.container{
+    /* border: 2px solid red; */
+    display: flex;
+}
 .content{
-    width: 55%;
-    height: 31.8%;
+    display: flex;
+    width: 52%;
+    width: 87%;
+    height: 31%;
+    height: 25%;
     padding: 5px;
     margin-top: 10px;
+    margin-left:6px;
     flex-direction: column;
     overflow-y: scroll;
     flex: 1;
     scroll-behavior: smooth;
     border-radius: 20px;
-    padding-left: 30px;
-   
+    /* padding-left: 30px; */ 
+    /* border: 2px solid yellow; */
+}
+
+.musicLeft{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    width: 68%;
+    height: 37%;
+    padding: 10px;
+}
+.musicRight{
+    /* border: 2px solid black; */
+    width: 35%;
+    margin-right: 0;
 }
 .contentrow
 {
     /* background-image: linear-gradient(to right top, #051937, #003d60, #006587, #0090a9, #2bbcc3); */
     border-radius: 20px;
+    margin: auto ;
+    width: 100%;
+    height: 1000px;
+    /* border: 2px solid purple; */
 }
-/* .container {
- 
-   
-  } */
+
+.bgImg{
+    /* border : 2px solid green; */
+    width: 100%;
+    height: 51%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
   
 .content .title{
     color: #fff;
     margin: 5px;
     padding: 8px;
+    /* border: 2px solid wheat; */
 }
 .music_row{
     display: flex;
-    justify-content: space-between;
     color: #fff;
-    border-radius: 30px;
-    /* box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     /* border-radius: 10px; */
-    padding: 7px;
+    /* box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    padding: 15px;
     margin: 5px;
-
+    margin: 15 auto;
+    /* box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12); */
+    /* border: 2px solid beige; */
+}
+.musicIcon{
+    border: 1px solid white;
+    height:40px;
+    width: 30px;
+    width: 8%;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.musicDetails{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
 }
 .music_row:hover{
-    /* background-color: #d4373e; */
-    box-shadow: 0 4px 8px 0 rgba(180, 21, 21, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 30px; 
+    background-color: rgb(194, 192, 192);;
+    box-shadow: 0 4px 8px 0 rgba(221, 212, 212, 0.1), 0 6px 20px 0 rgba(109, 108, 108, 0.12);
     transition: 0.25s;
     cursor: pointer;
+    border-radius: 30px;
 }
 .music_row p{
     margin: auto 0;
+}
+i{
+    margin: 0 10px;
+}
+.musicDetails i:hover{
+    color: red;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar{

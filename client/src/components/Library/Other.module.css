@@ -5,7 +5,7 @@
     border-radius:50px ;
 }
 .octopus{
-    /* object-fit: cover; */
+    object-fit: cover;
     background-color: linear-gradient(218deg, #e0d3e0 15%, rgb(144, 171, 224) 75%, #bc5ad4 100%);
     opacity: 0.5;
 
