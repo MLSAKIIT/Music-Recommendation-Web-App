@@ -93,6 +93,16 @@ const Login = ({ login, isAuthenticated }) => {
                 
                 </button>
               </Link>
+              <Link to="">
+                <button
+                  className="btn-primary1 sawo-button"
+                  style={{ margin: "auto"}}
+                >
+          
+                <span> Log-in with Spotify</span> 
+                
+                </button>
+              </Link>
             </div>
           </form>
           {/* <p className="my-1" style={{ color: 'white' }}>
