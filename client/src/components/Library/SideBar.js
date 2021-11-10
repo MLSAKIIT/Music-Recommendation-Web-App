@@ -1,6 +1,6 @@
 import classes from "./SideBar.module.css";
 import Divider from '@mui/material/Divider';
-
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (

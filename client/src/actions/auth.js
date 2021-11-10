@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { setAlert } from './alert';
 import setAuthToken from '../utils/setAuthToken';
+import api from '../utils/api';
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -13,11 +14,9 @@ import {
 
 // Load User
 export const loadUser = () => async dispatch => {
-  if(localStorage.token) {
-    setAuthToken(localStorage.token)
-  }
+  
   try {
-    const res = await axios.get('http://localhost:1821/api/auth');
+    const res = await api.get('/auth');
     console.log(res);
     dispatch({
       type: USER_LOADED,
@@ -63,35 +62,35 @@ export const register = ({ name, email, password }) => async dispatch => {
 };
 
 //Sawo Register
-export const sawoRegister = ({ name, email, password }) => async dispatch => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }
-  const body = JSON.stringify({ name, email, password })
+// export const sawoRegister = ({ name, email, password }) => async dispatch => {
+//   const config = {
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   }
+//   const body = JSON.stringify({ name, email, password })
   
-  try {
-    const res = await axios.post('http://localhost:1821/api/sawouser', body, config);
+//   try {
+//     const res = await axios.post('http://localhost:1821/api/sawouser', body, config);
 
-    dispatch({
-      type: REGISTER_SUCCESS,
-      payload: res.data
-    });
-    // dispatch(loadUser());
-  } catch (err) {
-    const errors = err.response.data.errors;
+//     dispatch({
+//       type: REGISTER_SUCCESS,
+//       payload: res.data
+//     });
+//     // dispatch(loadUser());
+//   } catch (err) {
+//     const errors = err.response.data.errors;
 
-    if (errors) {
-      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
-    }
-    console.log(err);
+//     if (errors) {
+//       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+//     }
+//     console.log(err);
 
-    dispatch({
-      type: REGISTER_FAIL
-    });
-  }
-};
+//     dispatch({
+//       type: REGISTER_FAIL
+//     });
+//   }
+// };
 
 // Login User
 export const login = (email, password) => async dispatch => {
@@ -145,7 +144,7 @@ export const sawoLogin = (name, email, password) => async dispatch => {
       payload: res.data
     });
 
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (err) {
     console.log(err);
     const errors = err.response.data.errors;
