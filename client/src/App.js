@@ -19,6 +19,7 @@ import Searchresults from './components/Library/Searchresults';
 import ArtistsSearch from './components/Library/ArtistsSearch';
 import Playlist from './components/Library/Playlist';
 import Favourite from './components/Library/Favourite';
+import Spotify from './auth/spotifyRegister';
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -45,6 +46,8 @@ const App = () => {
           <Route path="/ArtistsSearch" component={ArtistsSearch}/>
           <Route path="/Playlist" component={Playlist}/>
           <Route path="/Favourite" component={Favourite}/>
+          <Route path="/Spotify-login" component={Spotify}/>
+
 
         </Switch>
       </BrowserRouter>
