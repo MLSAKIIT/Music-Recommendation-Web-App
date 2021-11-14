@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import classes from "./Main.module.css";
+import classes from "./ArtistsSearch.module.css";
 import axios from 'axios';
 import SideBar from "./SideBar";
 import AudioPlayer from "./AudioPlayer";
@@ -7,6 +7,9 @@ import './Library.module.css'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import MusicList from "./MusicList";
+import Main from "./Main";
+import happyrock from './assets/happyrock.png'
 
 var dataresult;
 const ArtistsSearch = () => {
@@ -28,25 +31,43 @@ const ArtistsSearch = () => {
         }
     }
     return (
-        <>
+        <div className={classes.artistsSearch}>
             <div className={classes.row}>
-                {/* <SideBar /> */}
+                <SideBar />
                 <div className={classes.content}>
-
+                    {/* <ArtistSearch /> */}
                     <div className={classes.searchInputWrapper}>
                         <input className={classes.searchBar}
                             placeholder="Search for any artists here"
                             onKeyDown={handlesubmit}
                         />
                     </div>
+                    
                 </div>
-
             </div>
-            <img src={APIData.strArtistThumb} alt={APIData.strArtist} width={"50px"}></img>
 
-            <AudioPlayer />
+            {/* <AudioPlayer /> */}
+        </div>
 
-        </>
+        // <>
+        //     <div className={classes.row}>
+        //         {/* <SideBar /> */}
+        //         <div className={classes.content}>
+
+        //             <div className={classes.searchInputWrapper}>
+        //                 <input className={classes.searchBar}
+        //                     placeholder="Search for any artists here"
+        //                     onKeyDown={handlesubmit}
+        //                 />
+        //             </div>
+        //         </div>
+
+        //     </div>
+        //     <img src={APIData.strArtistThumb} alt={APIData.strArtist} width={"50px"}></img>
+
+        //     {/* <AudioPlayer /> */}
+
+        // </>
 
     );
 };

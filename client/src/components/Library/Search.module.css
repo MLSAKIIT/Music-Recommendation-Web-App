@@ -1,4 +1,4 @@
-.playlist{
+.search{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -17,7 +17,4 @@
 .demo{
     width: 100%;
     margin: 20px 30px;
-}
-body{
-    background: linear-gradient(218deg, #741276 15%, rgba(32,58,110,1) 75%, #121f58 100%);
 }

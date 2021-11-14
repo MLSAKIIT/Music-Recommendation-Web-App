@@ -69,9 +69,8 @@ const [show,setShow]=useState(false);
       </div>  
 
         {/* rendering the data here */}
-
-     {show?
-     <div>
+     {/* {show? */}
+     {/* <div>
     <ImageList sx={{ width: 700, height: 1000 ,padding:"20px"}}>
       {data.map((item, index) => (
         <ImageListItem sx={{padding:"10px"}} key={`${item.id}`  }>
@@ -91,9 +90,11 @@ const [show,setShow]=useState(false);
           />
         </ImageListItem>
       ))}
-    </ImageList>   </div>:<MusicList/>
+    </ImageList>   </div> */}
+
+     {/* :<MusicList/> (Remove) */} 
     
-     }
+      {/* } */}
 
 
 

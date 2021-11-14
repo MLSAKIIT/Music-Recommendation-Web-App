@@ -96,7 +96,7 @@ const Login = ({ login, isAuthenticated }) => {
               <Link to="/Spotify-login">
                 <button
                   className="btn-primary1 sawo-button"
-                  style={{ margin: "auto"}}
+                  style={{ margin: "10px auto"}}
                 >
           
                 <span> Log-in with spotify</span> 
