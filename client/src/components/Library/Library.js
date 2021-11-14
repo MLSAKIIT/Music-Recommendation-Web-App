@@ -3,10 +3,15 @@ import SideBar from "./SideBar";
 import Main from "./Main";
 import AudioPlayer from "./AudioPlayer";
 import MusicList from "./MusicList";
-import Other from "./Other";
 
 const Library = () => {
-  return (
+
+
+ return (
+   
+    <body >
+
+   
     <div className={classes.library}>
       <div className={classes.row}>
         <SideBar />
@@ -18,6 +23,7 @@ const Library = () => {
       </div>
       {/* <AudioPlayer /> */}
     </div>
+    </body>
   );
 };
 

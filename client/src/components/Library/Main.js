@@ -1,64 +1,20 @@
-import {Fragment,useState,useEffect} from "react";
+import {Fragment,useState} from "react";
 import classes from "./Main.module.css";
-import axios from 'axios';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import MusicList from "./MusicList";
-import { Redirect } from "react-router-dom";
+// import axios from 'axios';
+// import ImageList from '@mui/material/ImageList';
+// import ImageListItem from '@mui/material/ImageListItem';
+// import ImageListItemBar from '@mui/material/ImageListItemBar';
+// import MusicList from "./MusicList";
+
 
 
 
 const Main = () => {
-  
-const [show,setShow]=useState(false);
-  const [token, setToken] = useState("");
-  const [data, setData] = useState({});
-  const [target,setTarget]=useState('');
 
-  useEffect(() => {
-    if(show===true)
-    {
-        if (localStorage.getItem("accessToken")) {
-      setToken(localStorage.getItem("accessToken"));
-      console.log(localStorage.getItem("accessToken"));
-    }
-    }
-  
-  }, [show]);
-
-
-  const handlesubmit=(e)=>{
-  
-    if(e.key==='Enter')
-    {
-      console.log(localStorage.getItem("accessToken"));
-      setShow(true);
-      setTarget(e.target.value);
-      console.log(target);
-      axios
-      .get(`https://api.spotify.com/v1/search?query=${target}&type=track&offset=5&limit=10`, {
-        headers: {
-          Authorization: "Bearer " + token,
-        
-  
-        },
-      })
-      .then((response) => {
-        setData(response.data.tracks.items);
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    }
-
-  
-    }
-  
   return (
     <>
     <Fragment>
+
     
       <div className={classes.searchInputWrapper}>
       
@@ -98,9 +54,15 @@ const [show,setShow]=useState(false);
 
 
 
+      <div className={classes.searchInputWrapper}>
+
+      <input className={classes.searchBar} type='search'
+      placeholder="Search for any tracks here"
+      />
+      </div>
      </Fragment>
      </>
-    
+
   );
 };
 export default Main;

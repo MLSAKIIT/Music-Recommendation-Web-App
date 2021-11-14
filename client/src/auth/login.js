@@ -93,7 +93,8 @@ const Login = ({ login, isAuthenticated }) => {
                 
                 </button>
               </Link>
-              <Link to="/Spotify-login">
+
+{/*<Link to="/Spotify-login">
                 <button
                   className="btn-primary1 sawo-button"
                   style={{ margin: "10px auto"}}
@@ -102,7 +103,8 @@ const Login = ({ login, isAuthenticated }) => {
                 <span> Log-in with spotify</span> 
                 
                 </button>
-              </Link>
+              </Link>*/}
+
             </div>
           </form>
           {/* <p className="my-1" style={{ color: 'white' }}>

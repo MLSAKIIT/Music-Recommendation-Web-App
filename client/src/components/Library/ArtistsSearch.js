@@ -11,7 +11,7 @@ import MusicList from "./MusicList";
 import Main from "./Main";
 import happyrock from './assets/happyrock.png'
 
-var dataresult;
+
 const ArtistsSearch = () => {
     const [show, setShow] = useState(false);
 
