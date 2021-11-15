@@ -19,12 +19,8 @@ import Searchresults from './components/Library/Searchresults';
 // import ArtistsSearch from './components/Library/ArtistsSearch';
 import Search from './components/Library/Search';
 import Playlist from './components/Library/Playlist';
-
-// import Favourite from './components/Library/Favourite';
-// import Spotify from './auth/spotifyRegister';
-
-// import Favourite from './components/Library/Favourite';
-
+import Favourite from './components/Library/Favourite';
+import Songs from './components/Library/Songs';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -52,17 +48,15 @@ const App = () => {
           <Route exact path="/loginSawo" component={LoginPage} />
           <Route component={artists} path="/artists" />   
           <Route exact path="/library" component={Library}  />  
+          <Route exact path="/library/:songname" component={Songs} />
           <Route path="/loginSawo/choose-action" component={ChooseAction} />
           <Route path="/SearchResult" component={Searchresults}/>
           {/* <Route path="/ArtistsSearch" component={ArtistsSearch}/> */}
           <Route path="/Search" component={Search}/>
           <Route path="/Playlist" component={Playlist}/>
-
-          {/* <Route path="/Favourite" component={Favourite}/> */}
-          {/*<Route path="/Spotify-login" component={Spotify}/>*/}
-
-
-
+          <Route path="/Favourite" component={Favourite}/>
+          
+    
         </Switch>
       </BrowserRouter>
     </Provider>
