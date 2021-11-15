@@ -6,9 +6,6 @@ import classes from "./Main.module.css";
 // import ImageListItemBar from '@mui/material/ImageListItemBar';
 // import MusicList from "./MusicList";
 
-
-
-
 const Main = () => {
 
   return (

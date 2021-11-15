@@ -6,6 +6,7 @@ import bg1 from "./assets/bg1.png";
 import iconImg from "./assets/happyrock.png"
 import Other from './Other';
 import { useRef } from 'react'
+import { Link } from '@mui/material';
 const MusicList = () => {
     const titleRef = useRef();
     return (
@@ -18,17 +19,17 @@ const MusicList = () => {
 
                         <div className={classes.contentrow} >
                             {songs.map((music) => (
-                                
+                               
                                     <div className={classes.music_row}>
                                         <div className={classes.musicIcon}  style={{ backgroundImage: `url(${"https://img.icons8.com/color/48/000000/music-robot.png"})` }}></div>
-                                        <div className={classes.musicDetails}>
-                                            <p key={music.id} className="music">{music.name}</p>
+                                        <div className={classes.musicDetails}> <a href={`/library/${music.name}`}>
+                                            <p key={music.id} className="music">{music.name}</p></a>
                                             <p key={music.id} className="music">{(music.duration_ms / 60000).toFixed(0) + ":" + (((music.duration_ms % 60000) / 1000).toFixed(0) < 10 ? "00" : ((music.duration_ms % 60000) / 1000).toFixed(0))
                                             }  <i class="fas fa-heart"></i></p>
                                         </div>
                                     </div>
 
-                                
+                                    
                             ))}
                         </div>
                     </div>
