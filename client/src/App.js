@@ -54,18 +54,9 @@ const App = () => {
           {/* <Route path="/ArtistsSearch" component={ArtistsSearch}/> */}
           <Route path="/Search" component={Search}/>
           <Route path="/Playlist" component={Playlist}/>
-<<<<<<< HEAD
           <Route path="/Favourite" component={Favourite}/>
           
     
-=======
-
-          {/* <Route path="/Favourite" component={Favourite}/> */}
-          {/*<Route path="/Spotify-login" component={Spotify}/>*/}
-
-
-
->>>>>>> ce4fc377b692c33039af8fa9d42afe47f5b2adf4
         </Switch>
       </BrowserRouter>
     </Provider>

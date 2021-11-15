@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-
+import {grid ,Row,Col} from 'react-bootstrap';
+import SideBar from "./SideBar";
 const Songs=()=>{
 
     const [playlist,setPlaylist]=useState([]);
@@ -30,16 +31,20 @@ useEffect(() => {
     fetch();
   }, []);
     return (
-<div><div className="row">
-    <div className="col-md-12">
-        {playlist.map((data)=>(
+<div>
+   
+<Row className="justify-content-md-center">
+  
+    <Col  xs lg="2"> {playlist.map((data)=>(
             <div>
-           
+            
             <iframe title={data.id.videoId} width={"420"} height={"315"} src={`https://www.youtube.com/embed/${data.id.videoId}`} frameborder="0" allowfullscreen></iframe>
             </div>
-        ))}
+        ))}</Col>
+  
+  </Row>
+       
     </div>
-    </div> </div>
     )
 }
 export default Songs;
