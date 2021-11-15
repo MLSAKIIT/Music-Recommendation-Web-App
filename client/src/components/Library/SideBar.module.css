@@ -2,6 +2,7 @@
  .logo{
    display: flex;
    text-align: center;
+   cursor: pointer;
  }
  .logo h1{
    margin: auto;
@@ -82,7 +83,8 @@
 
 }
 .content {
-  margin-top: 16%;
+  margin-top: 9%;
+  /* border: 2px solid red; */
   /* margin-left: 5px; */
 font-family: 'Raleway', Helvetica, Arial, sans-serif;
 
@@ -90,8 +92,8 @@ font-family: 'Raleway', Helvetica, Arial, sans-serif;
 .content ul li a {
   list-style: none;
   display: block;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 12px;
+  margin: 10px 0;
   color: whitesmoke;
   font-weight: 500;
   transition: all 0.4s;

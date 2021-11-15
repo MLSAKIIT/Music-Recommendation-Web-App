@@ -16,7 +16,8 @@ import LoginPage from './components/SawoLogIn/SawoLogIn';
 // import PrivateRoute from './auth/private-route';
 import Library from './components/Library/Library';
 import Searchresults from './components/Library/Searchresults';
-import ArtistsSearch from './components/Library/ArtistsSearch';
+// import ArtistsSearch from './components/Library/ArtistsSearch';
+import Search from './components/Library/Search';
 import Playlist from './components/Library/Playlist';
 import Favourite from './components/Library/Favourite';
 import Songs from './components/Library/Songs';
@@ -50,11 +51,21 @@ const App = () => {
           <Route exact path="/library/:songname" component={Songs} />
           <Route path="/loginSawo/choose-action" component={ChooseAction} />
           <Route path="/SearchResult" component={Searchresults}/>
-          <Route path="/ArtistsSearch" component={ArtistsSearch}/>
+          {/* <Route path="/ArtistsSearch" component={ArtistsSearch}/> */}
+          <Route path="/Search" component={Search}/>
           <Route path="/Playlist" component={Playlist}/>
+<<<<<<< HEAD
           <Route path="/Favourite" component={Favourite}/>
           
     
+=======
+
+          {/* <Route path="/Favourite" component={Favourite}/> */}
+          {/*<Route path="/Spotify-login" component={Spotify}/>*/}
+
+
+
+>>>>>>> ce4fc377b692c33039af8fa9d42afe47f5b2adf4
         </Switch>
       </BrowserRouter>
     </Provider>

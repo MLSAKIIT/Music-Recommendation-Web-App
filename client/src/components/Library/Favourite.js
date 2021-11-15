@@ -11,7 +11,7 @@ const Favourite = () => {
         
       </div>
     <Fragment> 
-      <AudioPlayer />
+      {/* <AudioPlayer /> */}
      </Fragment>
      </>   
   );
