@@ -15,7 +15,7 @@ const fetch = async (e) => {
                   setPlaylist([]);
                   try {
                      
-                    const { data } = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDmUQLzuNSbg_b6636LuXi00a6PR03vO4o&type=audio&part=snippet&maxResults=5&q=${e}`);
+                    const { data } = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDqDk0PyWS7cosWtgRavcZYgC4MIgttNcM&type=video&part=snippet&maxResults=5&q=${e}`);
                     setPlaylist(data.items);
                     console.log(data.items);
                   } catch (err) {
