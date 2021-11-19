@@ -58,6 +58,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:1821",
+  "proxy": "http://localhost:1821"
   
 }
