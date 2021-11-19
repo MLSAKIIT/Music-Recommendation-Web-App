@@ -13,7 +13,7 @@ const Search = () => {
             setPlaylist([]);
             try {
 
-                const { data } = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDaJlfCMDG4kQKEIfUoT1wgP5MAT10eFH4&type=audio&part=snippet&maxResults=5&q=${e}`);
+                const { data } = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDaJlfCMDG4kQKEIfUoT1wgP5MAT10eFH4&type=audio&part=snippet&maxResults=6&q=${e}`);
                 setPlaylist(data.items);
                 console.log(data.items);
             } catch (err) {

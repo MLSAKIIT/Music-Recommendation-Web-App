@@ -21,7 +21,8 @@ import Search from './components/Library/Search';
 import Playlist from './components/Library/Playlist';
 import Favourite from './components/Library/Favourite';
 import Songs from './components/Library/Songs';
-import Topmusicvideos from './components/Topmusicvideos';
+
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -55,7 +56,7 @@ const App = () => {
           <Route path="/Search" component={Search}/>
           <Route path="/Playlist" component={Playlist}/>
           <Route path="/Favourite" component={Favourite}/>
-          <Route path="/Topvideos" component={Topmusicvideos}/>
+
     
         </Switch>
       </BrowserRouter>
