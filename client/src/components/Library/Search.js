@@ -1,10 +1,9 @@
-import { Fragment, useState, useEffect } from "react";
+import {  useState} from "react";
 import classes from "./Search.module.css";
 import axios from 'axios';
 import SideBar from "./SideBar";
 
 import classess from "./Main.module.css";
-import { Row, Col } from 'react-bootstrap';
 
 const Search = () => {
 
