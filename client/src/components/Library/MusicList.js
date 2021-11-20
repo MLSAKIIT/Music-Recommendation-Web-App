@@ -8,8 +8,9 @@ import iconImg from "./assets/happyrock.png"
 import Other from './Other';
 import { useRef,useState,useEffect } from 'react'
 import axios from 'axios';
-
-
+import Loader from "react-loader-spinner";
+import RefreshOutlinedIcon from '@mui/icons-material/RefreshOutlined';
+import Alert from '@mui/material/Alert';
 const MusicList = () => {
 
 
@@ -57,10 +58,12 @@ const MusicList = () => {
 
     const titleRef = useRef();
     if (loading) {
-        return <p>Data is loading...</p>;
+      const style ={ position: "fixed", top: "50%", left: "60%", transform: "translate(-50%, -50%)" };
+        return <div style={style}><Loader type="Audio" color="#2EE59D" height={50} width={50}  /></div>;
       }
       if (error|| !Array.isArray(data)) {
-        return <p>There was an error loading your data!</p>;
+        const style ={ position: "fixed", top: "50%", left: "60%", transform: "translate(-50%, -50%)" };
+        return <div style={style}><Alert severity="error">Oops something went wrong there!</Alert></div>;
       }
       function handleclick(e)
       {
@@ -74,7 +77,7 @@ const MusicList = () => {
                 <div className={classes.musicLeft}>
                     <h2 className={classes.title} style={{ color: "white", alignItems: "flex-start", justifyContent: "flex-start", fontSize: '30px',paddingTop: "20px", paddingLeft: "30px" }}>Let the Music Speak</h2>
                     <div className={classes.content} ref={titleRef}>
-                 <button className={classes.refresh} onClick={refresh}>Refresh my playlist</button>
+                 <button className={classes.refresh} onClick={refresh}>Refresh my playlist <RefreshOutlinedIcon/></button>
                         <div className={classes.contentrow} >
                         
                             {data.map((music) => (

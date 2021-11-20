@@ -47,22 +47,16 @@ const Search = () => {
                             onKeyDown={handlesubmit}
                         />
                     </div>
-                    {/* <Row className="justify-content-md-center"> */}
-
-                    {/* <Col xs lg="2">*/}
-                    {/* <div className={classes.rowContent}> */}
+                   
                     <div className={classes.cards}>
                         {playlist.map((data) => (
-                        // <div>
+                  
 
                             <iframe title={data.id.videoId} src={`https://www.youtube.com/embed/${data.id.videoId}`} frameborder="0" allowfullscreen></iframe>
-                        // </div>
+                     
                     ))}
                     </div>
-                    {/* </div> */}
-                    {/* </Col> */}
-
-                    {/* </Row> */}
+                
 
                 </div>
             </div>
