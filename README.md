@@ -1,5 +1,5 @@
 # Music-Recommendation-Web-App 
- <img src="https://user-images.githubusercontent.com/66815801/142719469-310136c8-355c-4a74-be2c-e37921762923.jpg" height="700px" width="1000px">
+ <img src="https://user-images.githubusercontent.com/66815801/142719469-310136c8-355c-4a74-be2c-e37921762923.jpg" height="500px" width="1000px">
 
 
 
