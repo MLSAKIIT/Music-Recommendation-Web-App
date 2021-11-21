@@ -1,6 +1,7 @@
 .searchBar {
   margin-top: 25px;
   margin-left: 15px;
+  border: 2px solid red;
   width: 35rem;
   /* width: 65%; */
   height: 3rem;
@@ -29,5 +30,6 @@
 
 .searchInputWrapper {
   position: relative;
+  margin: 0px auto;
 }
 

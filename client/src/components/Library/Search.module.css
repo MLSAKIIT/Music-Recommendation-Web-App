@@ -1,0 +1,36 @@
+.search{
+    height: 100vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.row{
+    display: flex;
+    height: auto;
+}
+.content{
+    display: flex;
+    flex-direction: column; 
+    width:100%;
+    /* height: auto; */
+    /* border: 2px solid black */
+}
+
+/* .rowContent{
+    border: 2px solid plum;
+    width: 100%;
+    display: flex;
+    height: auto;
+} */
+.cards{
+    /* border: 2px solid blue;  */
+    width: 100%;
+}
+iframe{
+    /* border: 2px solid greenyellow; */
+    height: 220px;
+    width: 325px;
+    margin: 30px 13px;
+}

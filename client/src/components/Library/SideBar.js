@@ -1,31 +1,26 @@
 import classes from "./SideBar.module.css";
-import Divider from '@mui/material/Divider';
 import { Link } from "react-router-dom";
+
 
 const SideBar = () => {
   return (
 
     <div className={classes.sideBar}>
       <div className={classes.logo}>
-        <h1 className={classes.appName}>μ-seak</h1>
+        <h1 className={classes.appName}><Link to="/library">μ-seak</Link></h1>
       </div>
-      {/* <span>Library</span> */}
       <div className={classes.content}>
 
         <ul>
-          <li><a href="/library"><i class="fas fa-home"></i> Home</a></li>
-          {/* <Divider /> */}
-          <li><a href="/playlist"><i class="fas fa-music"></i> Playlist</a></li>
-          {/* <Divider /> */}
-          <li> <a href="/ArtistsSearch"><i class="fas fa-user"></i> Artist</a></li>
-          {/* <Divider /> */}
-          <li><a href="/favourite"><i class="fas fa-heart"></i> Favourite</a> </li>
-          {/* <Divider /> */}
+          <li><Link to="/library"><i class="fas fa-home"></i> Home</Link></li>
+          
+          <li> <Link to="/Search"><i class="fas fa-search"></i> Search</Link></li>
+          
+          <li><Link to="/playlist"><i class="fas fa-music"></i> Playlist</Link></li>
+          
+          <li><Link to="#"><i class="fa fa-sign-out" style={{fontSize:'22px'}}></i>Logout</Link> </li>
+          
         </ul>
-        {/* <a href="/home">Home</a>
-        <a href="/playlist">Playlist</a>
-        <a href="/artists">Artist</a>
-        <a href="/favourite">Favourite</a> */}
       </div>
     </div>
   );

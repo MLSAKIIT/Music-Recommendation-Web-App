@@ -3,21 +3,27 @@ import SideBar from "./SideBar";
 import Main from "./Main";
 import AudioPlayer from "./AudioPlayer";
 import MusicList from "./MusicList";
-import Other from "./Other";
-
+import axios from 'axios';
 const Library = () => {
-  return (
+
+
+ return (
+   
+    <body >
+
+   
     <div className={classes.library}>
       <div className={classes.row}>
         <SideBar />
         <div className={classes.content}>
-          <Main className={classes.main} />
+          {/* <Main className={classes.main} /> */}
           <MusicList className={classes.musicList} />
           
         </div>
       </div>
-      <AudioPlayer />
+      {/* <AudioPlayer /> */}
     </div>
+    </body>
   );
 };
 
