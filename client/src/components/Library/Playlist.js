@@ -1,51 +1,44 @@
 
-import { Fragment, useState } from "react";
-import happyrock from './assets/happyrock.png'
-import AudioPlayer from "./AudioPlayer";
+import { Fragment, useEffect, useState } from "react";
+
 import SideBar from "./SideBar";
 import classes from './Playlist.module.css'
-import ArtistSearch from './ArtistsSearch'
-
-// import {Fragment,useEffect,useState} from "react";
-// import AudioPlayer from "./AudioPlayer";
-// // import SideBar from "./SideBar";
-// import classes from './SideBar.module.css'
-// import './Playlist.module.css'
-// import ImageList from '@mui/material/ImageList';
-// import ImageListItem from '@mui/material/ImageListItem';
-// import ImageListItemBar from '@mui/material/ImageListItemBar';
-// import axios from "axios";
-
-
-
-
+import axios from "axios";
+import topvideos from "../../data/topmusicvideos";
+import weeklyglobal from "../../data/top-weekly-songs-global";
+import weeklyindia from "../../data/top-weekly-songs-india";
 
 const Playlist = () => {
-
-
+ 
   return (
 
     <div className={classes.playlist}>
       <div className={classes.row}>
         <SideBar />
         <div className={classes.content}>
-          {/* <ArtistSearch /> */}
           <div className={classes.demo}>
             <h2 style={{ color: 'white', marginTop: '10px' }}>Your Playlist</h2>
-            <div class="card" style={{ width: '18rem', marginTop: '43px' }}>
-              <img src={happyrock} class="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Demo</h5>
-                <p className="card-text">Remove it while working on Playlist</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-              </div>
+            <div>{topvideos.map((data)=>(
+            <div>
+                <iframe width="560" height="315" src={data["YouTube URL"]} title={data["Video Title"]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div></div>
             </div>
-            
+        ))}</div>
+             <div>{weeklyglobal.map((data)=>(
+            <div>
+                <iframe width="560" height="315" src={data["YouTube URL"]} title={data["Track Name"]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div></div>
+            </div>
+        ))}</div>
+         <div>{weeklyindia.map((data)=>(
+            <div>
+                <iframe width="560" height="315" src={data["YouTube URL"]} title={data["Track Name"]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div></div>
+            </div>
+        ))}</div>
           </div>
         </div>
       </div>
-
-      {/* <AudioPlayer /> */}
     </div>
 
   );

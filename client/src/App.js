@@ -22,6 +22,7 @@ import Playlist from './components/Library/Playlist';
 import Favourite from './components/Library/Favourite';
 import Songs from './components/Library/Songs';
 
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -55,7 +56,7 @@ const App = () => {
           <Route path="/Search" component={Search}/>
           <Route path="/Playlist" component={Playlist}/>
           <Route path="/Favourite" component={Favourite}/>
-          
+
     
         </Switch>
       </BrowserRouter>

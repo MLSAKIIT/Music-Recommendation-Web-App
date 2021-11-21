@@ -113,3 +113,25 @@ i{
 ::-webkit-scrollbar{
     display: none;
 }
+.refresh{
+    background-color: #a70707;
+    color: #fff;
+    height: 45px;
+     border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* width: max-content; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    align-self: center;
+}
+.refresh:hover{
+    background-color: #f5f0f0;
+    color: rgb(14, 13, 13);
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 20px rgba(221, 5, 5, 0.4);
+  }

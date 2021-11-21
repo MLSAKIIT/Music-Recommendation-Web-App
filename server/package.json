@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
+    "billboard-hot-100": "^1.0.4",
+    "cheerio": "^1.0.0-rc.10",
     "config": "^3.3.6",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -20,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.14",
     "nodemon": "^2.0.13",
-    "querystring": "^0.2.1"
+    "querystring": "^0.2.1",
+    "request": "^2.88.2"
   }
 }

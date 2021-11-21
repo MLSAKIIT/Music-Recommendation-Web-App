@@ -48,7 +48,7 @@ function Artists() {
     <div  >
        <Navbar />
         <h1 className={classes.heading} >CHOOSE YOUR FAVOURITE ARTISTS 
-        <ArtistsSendData data={AR} />
+        
        </h1>
        
         <div className={classes.searchbtn}>
@@ -58,7 +58,7 @@ function Artists() {
         }}/>
        </div>
         <div>{content}</div>
-  
+        <ArtistsSendData data={AR} />
     </div>
   );
 }
