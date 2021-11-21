@@ -127,6 +127,7 @@ i{
     font-weight: 500;
     padding: 10px;
     border: none;
+    margin-left: 30px;
     align-self: center;
 }
 .refresh:hover{
@@ -134,4 +135,24 @@ i{
     color: rgb(14, 13, 13);
     transform: translateY(-3px);
     box-shadow: 0px 15px 20px rgba(221, 5, 5, 0.4);
+  }
+  .searchBar {
+    margin-top: 25px;
+    margin-left: 15px;
+    border: 2px solid red;
+    width: 19rem;
+    /* width: 65%; */
+    height: 3rem;
+    padding: 0 1rem; 
+    border: 1px solid rgb(22, 21, 21);
+    border-radius: 50px;
+    transition: transform 0.1s ease-in-out;
+    outline: none;
+    transition: all 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .searchBar::placeholder {
+    color: #a1a1a1;
+    background-color: white ;
   }

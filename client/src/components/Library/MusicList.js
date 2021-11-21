@@ -1,13 +1,8 @@
 import classes from './MusicList.module.css';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import songs from './../../data/songs-sampledataset';
-import bg from "./assets/homeBg.png"
 import bg1 from "./assets/bg1.png";
-import iconImg from "./assets/happyrock.png"
-import Other from './Other';
 import { useRef,useState,useEffect } from 'react'
-import axios from 'axios';
 import Loader from "react-loader-spinner";
 import RefreshOutlinedIcon from '@mui/icons-material/RefreshOutlined';
 import Alert from '@mui/material/Alert';
@@ -21,12 +16,14 @@ const MusicList = () => {
 
     useEffect(() => {
       setLoading(true);
-      fetch("https://api-for-music-rec.pratyushpatnai2.repl.co/?name=memories")
+      fetch("https://api-for-music-rec.pratyushpatnai2.repl.co/?name=Faded")
         .then((res) => res.json())
         .then((data) => {
           const result = Object.values(data);
           console.log(result);
           setData(result);
+        
+          
        
         })
         .catch((err) => {
@@ -54,7 +51,26 @@ const MusicList = () => {
         });
         console.log(window.localStorage.getItem("songs"));
      }
-   
+   function handlesubmit(e)
+   {
+     if(e.key==='Enter')
+     {
+      fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${e.target.value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const result = Object.values(data);
+        console.log(result);
+        setData(result);
+     
+      })
+      .catch((err) => {
+          setError(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+     }
+   }
 
     const titleRef = useRef();
     if (loading) {
@@ -77,7 +93,13 @@ const MusicList = () => {
                 <div className={classes.musicLeft}>
                     <h2 className={classes.title} style={{ color: "white", alignItems: "flex-start", justifyContent: "flex-start", fontSize: '30px',paddingTop: "20px", paddingLeft: "30px" }}>Let the Music Speak</h2>
                     <div className={classes.content} ref={titleRef}>
+                      <div>
+                    <input className={classes.searchBar} type='search'
+                            placeholder="Search for any tracks here"
+                            onKeyDown={handlesubmit}
+                        />
                  <button className={classes.refresh} onClick={refresh}>Refresh my playlist <RefreshOutlinedIcon/></button>
+                 </div>
                         <div className={classes.contentrow} >
                         
                             {data.map((music) => (
