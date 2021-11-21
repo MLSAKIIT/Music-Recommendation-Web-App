@@ -2,6 +2,21 @@
     /* border: 2px solid red; */
     display: flex;
 }
+.header{
+    /* border: 2px solid wheat; */
+    width: 94%;
+    display: flex;
+}
+.title{
+    /* border: 2px solid red; */
+    width: 62%;
+    margin: auto;
+    padding-left: 24px;
+    padding-bottom: 10px;
+}
+
+
+
 .content{
     display: flex;
     width: 52%;
@@ -90,6 +105,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    margin: auto;
 }
 .music_row:hover{
     background-color: rgb(194, 192, 192);;
@@ -114,7 +130,8 @@ i{
     display: none;
 }
 .refresh{
-    background-color: #a70707;
+    /* background-color: #a70707; */
+    background: linear-gradient(218deg, rgb(22, 44, 87) 15%, rgb(12, 22, 63) 120%);
     color: #fff;
     height: 45px;
      border-radius: 45px;
@@ -125,13 +142,15 @@ i{
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    padding: 10px;
+    padding: 13px;
+    margin: auto;
+    margin-top: 19px;
     border: none;
     align-self: center;
 }
-.refresh:hover{
+/* .refresh:hover{
     background-color: #f5f0f0;
     color: rgb(14, 13, 13);
     transform: translateY(-3px);
     box-shadow: 0px 15px 20px rgba(221, 5, 5, 0.4);
-  }
+  } */
