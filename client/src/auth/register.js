@@ -41,9 +41,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className="box" >
       <div className="box-left">
+        <div className="logo">
+        <Link to="/">
+            <h3>μ-seak</h3>
+          </Link>
+        </div>
         <div className="register-box">
           <h1 className="large1"> GET STARTED</h1>
           <p className="lead1">Find the latest and greatest type of music</p>

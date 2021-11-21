@@ -131,7 +131,8 @@ i{
 }
 .refresh{
     /* background-color: #a70707; */
-    background: linear-gradient(218deg, rgb(22, 44, 87) 15%, rgb(12, 22, 63) 120%);
+    /* background: linear-gradient(218deg, rgb(22, 44, 87) 15%, rgb(12, 22, 63) 120%); */
+    background-color: #2bc98a;
     color: #fff;
     height: 45px;
      border-radius: 45px;
@@ -148,9 +149,10 @@ i{
     border: none;
     align-self: center;
 }
-/* .refresh:hover{
-    background-color: #f5f0f0;
+.refresh:hover{
+    /* background-color: #f5f0f0;
     color: rgb(14, 13, 13);
-    transform: translateY(-3px);
-    box-shadow: 0px 15px 20px rgba(221, 5, 5, 0.4);
-  } */
+    box-shadow: 0px 15px 20px rgba(221, 5, 5, 0.4); */
+    transform: translateY(2px);
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.2);
+  }
