@@ -59,35 +59,35 @@ const weeklyglobal=[
     "Weekly Growth": "121.1%",
     "YouTube URL": "https://www.youtube.com/embed/Q-GOFPM01d0"
   },
-  {
-    "Rank": 7,
-    "Previous Rank": 5,
-    "Track Name": "STAY",
-    "Artist Names": "The Kid Laroi & Justin Bieber",
-    "Weeks on Chart": 18,
-    "Views": 33533497,
-    "Weekly Growth": "-15.3%",
-    "YouTube URL": "https://www.youtube.com/embed/kTJczUoc26U"
-  },
-  {
-    "Rank": 8,
-    "Previous Rank": 6,
-    "Track Name": "Pepas",
-    "Artist Names": "Farruko",
-    "Weeks on Chart": 17,
-    "Views": 32924591,
-    "Weekly Growth": "-10.4%",
-    "YouTube URL": "https://www.youtube.com/embed/y8trd3gjJt0"
-  },
-  {
-    "Rank": 9,
-    "Previous Rank": 7,
-    "Track Name": "INDUSTRY BABY (feat. Jack Harlow)",
-    "Artist Names": "Lil Nas X",
-    "Weeks on Chart": 16,
-    "Views": 31655732,
-    "Weekly Growth": "-8.4%",
-    "YouTube URL": "https://www.youtube.com/embed/UTHLKHL_whs"
-  }
+  // {
+  //   "Rank": 7,
+  //   "Previous Rank": 5,
+  //   "Track Name": "STAY",
+  //   "Artist Names": "The Kid Laroi & Justin Bieber",
+  //   "Weeks on Chart": 18,
+  //   "Views": 33533497,
+  //   "Weekly Growth": "-15.3%",
+  //   "YouTube URL": "https://www.youtube.com/embed/kTJczUoc26U"
+  // },
+  // {
+  //   "Rank": 8,
+  //   "Previous Rank": 6,
+  //   "Track Name": "Pepas",
+  //   "Artist Names": "Farruko",
+  //   "Weeks on Chart": 17,
+  //   "Views": 32924591,
+  //   "Weekly Growth": "-10.4%",
+  //   "YouTube URL": "https://www.youtube.com/embed/y8trd3gjJt0"
+  // },
+  // {
+  //   "Rank": 9,
+  //   "Previous Rank": 7,
+  //   "Track Name": "INDUSTRY BABY (feat. Jack Harlow)",
+  //   "Artist Names": "Lil Nas X",
+  //   "Weeks on Chart": 16,
+  //   "Views": 31655732,
+  //   "Weekly Growth": "-8.4%",
+  //   "YouTube URL": "https://www.youtube.com/embed/UTHLKHL_whs"
+  // }
 ]
 export default weeklyglobal;
