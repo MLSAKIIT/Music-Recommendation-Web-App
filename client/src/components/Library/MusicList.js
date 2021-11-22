@@ -91,11 +91,11 @@ const MusicList = () => {
 
             <div className={classes.container}>
                 <div className={classes.musicLeft}>
-                    <h2 className={classes.title} style={{ color: "white", alignItems: "flex-start", justifyContent: "flex-start", fontSize: '30px',paddingTop: "20px", paddingLeft: "30px" }}>Let the Music Speak</h2>
+                    <h2 className={classes.title} style={{  alignItems: "flex-start", justifyContent: "flex-start", fontSize: '35px',paddingTop: "20px", paddingLeft: "30px" }}>LET THE MUSIC SPEAK</h2>
                     <div className={classes.content} ref={titleRef}>
                       <div>
                     <input className={classes.searchBar} type='search'
-                            placeholder="Search for any tracks here"
+                            placeholder="Search for songs..."
                             onKeyDown={handlesubmit}
                         />
                  <button className={classes.refresh} onClick={refresh}>Refresh my playlist <RefreshOutlinedIcon/></button>

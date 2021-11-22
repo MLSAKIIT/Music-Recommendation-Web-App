@@ -11,6 +11,7 @@
 }
 .box {
   height: max-content;
+  height: 100vh;
   display: flex;
   margin: 0px;
   background-color: #1d3536;
@@ -18,10 +19,11 @@
 
 .box-left {
   width: 47%;
-  padding-top: 10px;
+  padding-top: 3px;
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
+  /* border: 2px solid red; */
 }
 
 .box-right {
@@ -31,15 +33,23 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.logo{
+  color: #f10d19;
+  color: #d4373e;
+  height: 3rem;
+  padding: 15px 0;
+  /* border: 2px solid yellow; */
+}
 .register-box {
   width: 94%;
-  margin: 2.4rem auto;
+  margin: 1rem auto;
+  /* border: 2px solid black; */
 }
 .lead1 {
   color: white;
   font-size: 20px;
   word-spacing: 1px;
-  margin: 5px;
+  margin: 10px;
   padding: 3px;
 }
 .large1 {

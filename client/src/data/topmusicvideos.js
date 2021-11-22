@@ -58,37 +58,37 @@ const topvideos=[
     "Views": 17847009,
     "Weekly Growth": "-11.30%",
     "YouTube URL": "https://www.youtube.com/embed/gvyUuxdRdR4"
-  },
-  {
-    "Rank": 7,
-    "Previous Rank": "",
-    "Video Title": "Kusu Kusu",
-    "Artist Names": "Zahrah S Khan & Dev Negi",
-    "Weeks on Chart": 1,
-    "Views": 16483646,
-    "Weekly Growth": "",
-    "YouTube URL": "https://www.youtube.com/embed/RgzLnmTaCAU"
-  },
-  {
-    "Rank": 8,
-    "Previous Rank": 5,
-    "Video Title": "STAY (Official Video)",
-    "Artist Names": "Justin Bieber & The Kid Laroi",
-    "Weeks on Chart": 18,
-    "Views": 15586835,
-    "Weekly Growth": "-7.20%",
-    "YouTube URL": "https://www.youtube.com/embed/kTJczUoc26U"
-  },
-  {
-    "Rank": 9,
-    "Previous Rank": 7,
-    "Video Title": "Pepas (Official Video)",
-    "Artist Names": "Farruko",
-    "Weeks on Chart": 14,
-    "Views": 14586100,
-    "Weekly Growth": "-8.40%",
-    "YouTube URL": "https://www.youtube.com/embed/y8trd3gjJt0"
   }
+  // {
+  //   "Rank": 7,
+  //   "Previous Rank": "",
+  //   "Video Title": "Kusu Kusu",
+  //   "Artist Names": "Zahrah S Khan & Dev Negi",
+  //   "Weeks on Chart": 1,
+  //   "Views": 16483646,
+  //   "Weekly Growth": "",
+  //   "YouTube URL": "https://www.youtube.com/embed/RgzLnmTaCAU"
+  // },
+  // {
+  //   "Rank": 8,
+  //   "Previous Rank": 5,
+  //   "Video Title": "STAY (Official Video)",
+  //   "Artist Names": "Justin Bieber & The Kid Laroi",
+  //   "Weeks on Chart": 18,
+  //   "Views": 15586835,
+  //   "Weekly Growth": "-7.20%",
+  //   "YouTube URL": "https://www.youtube.com/embed/kTJczUoc26U"
+  // },
+  // {
+  //   "Rank": 9,
+  //   "Previous Rank": 7,
+  //   "Video Title": "Pepas (Official Video)",
+  //   "Artist Names": "Farruko",
+  //   "Weeks on Chart": 14,
+  //   "Views": 14586100,
+  //   "Weekly Growth": "-8.40%",
+  //   "YouTube URL": "https://www.youtube.com/embed/y8trd3gjJt0"
+  // }
     
  
 ]

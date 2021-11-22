@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
 .container{
     /* border: 2px solid red; */
     display: flex;
 }
+.header{
+    /* border: 2px solid wheat; */
+    width: 94%;
+    display: flex;
+}
+.title{
+    /* border: 2px solid red; */
+    font-family: 'Estonia', cursive;
+    color: white;
+    text-shadow: 4px 0 1px rgba(255, 0, 242, 0.5), -4px 0 1px rgba(255, 136, 0, 0.5);
+   
+}
+
+
+
 .content{
     display: flex;
     width: 52%;
@@ -90,6 +106,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    margin: auto;
 }
 .music_row:hover{
     background-color: rgb(194, 192, 192);;
@@ -114,9 +131,12 @@ i{
     display: none;
 }
 .refresh{
-    background-color: #a70707;
+    /* background-color: #a70707; */
+    /* background: linear-gradient(218deg, rgb(22, 44, 87) 15%, rgb(12, 22, 63) 120%); */
+    background-color: #c92b38;
     color: #fff;
-    height: 45px;
+    height: max-content;
+    width: max-content;
      border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     /* width: max-content; */
@@ -125,7 +145,9 @@ i{
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    padding: 10px;
+    padding: 13px;
+    margin: auto;
+    margin-top: 19px;
     border: none;
     margin-left: 30px;
     align-self: center;
@@ -141,7 +163,7 @@ i{
     margin-left: 15px;
     border: 2px solid red;
     width: 19rem;
-    /* width: 65%; */
+    width: 40%;
     height: 3rem;
     padding: 0 1rem; 
     border: 1px solid rgb(22, 21, 21);
