@@ -42,7 +42,7 @@
     flex-direction: column;
     width: 65%;
     height: 37%;
-    height: 54%;
+    height: 50%;
     padding: 5px;
     /* border: 2px solid black; */
 }
@@ -141,13 +141,13 @@ i{
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     /* width: max-content; */
     font-family: 'Roboto', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
     padding: 13px;
     margin: auto;
-    margin-top: 19px;
+    margin-top: 4px;
     border: none;
     margin-left: 30px;
     align-self: center;
@@ -159,11 +159,10 @@ i{
     box-shadow: 0px 15px 20px rgba(221, 5, 5, 0.4);
   }
   .searchBar {
-    margin-top: 25px;
-    margin-left: 15px;
-    border: 2px solid red;
+    margin-top: 5px;
+    margin-left: 5px;
     width: 19rem;
-    width: 40%;
+    width: 56%;
     height: 3rem;
     padding: 0 1rem; 
     border: 1px solid rgb(22, 21, 21);
@@ -172,9 +171,15 @@ i{
     outline: none;
     transition: all 0.4s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border: 2px solid red; */
   }
   
   .searchBar::placeholder {
     color: #a1a1a1;
     background-color: white ;
+  }
+  .btns{
+      display: flex;
+      width: 100%;
+      /* border: 2px solid pink; */
   }
