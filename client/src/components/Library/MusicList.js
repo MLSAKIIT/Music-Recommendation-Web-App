@@ -16,6 +16,29 @@ const MusicList = () => {
 
     useEffect(() => {
       setLoading(true);
+      if(localStorage.getItem("songs")!=null)
+      {
+        console.log(localStorage.getItem("songs"));
+        fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${localStorage.getItem("songs")}`)
+          .then((res) => res.json())
+          .then((data) => {
+            const result = Object.values(data);
+            console.log(result);
+            setData(result);
+          
+            
+         
+          })
+          .catch((err) => {
+              setError(err);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }
+      else
+      {
+      
       fetch("https://api-for-music-rec.pratyushpatnai2.repl.co/?name=Faded")
         .then((res) => res.json())
         .then((data) => {
@@ -32,6 +55,8 @@ const MusicList = () => {
         .finally(() => {
           setLoading(false);
         });
+      }
+      
     }, []);
      function refresh()
      {
