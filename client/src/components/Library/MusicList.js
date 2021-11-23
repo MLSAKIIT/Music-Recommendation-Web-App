@@ -13,61 +13,88 @@ const MusicList = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
-
-  useEffect(() => {
-    setLoading(true);
-    fetch("https://api-for-music-rec.pratyushpatnai2.repl.co/?name=Faded")
-      .then((res) => res.json())
-      .then((data) => {
-        const result = Object.values(data);
-        console.log(result);
-        setData(result);
-
-
-
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
-  function refresh() {
-    fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${window.localStorage.getItem("songs")}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const result = Object.values(data);
-        console.log(result);
-        setData(result);
-
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-    console.log(window.localStorage.getItem("songs"));
-  }
-  function handlesubmit(e) {
-    if (e.key === 'Enter') {
-      fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${e.target.value}`)
+    useEffect(() => {
+      setLoading(true);
+      if(localStorage.getItem("songs")!=null)
+      {
+        console.log(localStorage.getItem("songs"));
+        fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${localStorage.getItem("songs")}`)
+          .then((res) => res.json())
+          .then((data) => {
+            const result = Object.values(data);
+            console.log(result);
+            setData(result);
+          })
+          .catch((err) => {
+              setError(err);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }
+      else
+      {
+      
+      fetch("https://api-for-music-rec.pratyushpatnai2.repl.co/?name=Faded")
         .then((res) => res.json())
         .then((data) => {
           const result = Object.values(data);
           console.log(result);
           setData(result);
-
+        
+          
+       
         })
         .catch((err) => {
-          setError(err);
+            setError(err);
         })
         .finally(() => {
           setLoading(false);
         });
-    }
+      }
+      
+    }, []);
+     function refresh()
+     {
+        fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${window.localStorage.getItem("songs")}`)
+        .then((res) => res.json())
+        .then((data) => {
+          const result = Object.values(data);
+          console.log(result);
+          setData(result);
+       
+        })
+        .catch((err) => {
+            setError(err);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+        console.log(window.localStorage.getItem("songs"));
+     }
+   function handlesubmit(e)
+   {
+     if(e.key==='Enter')
+     {
+      fetch(`https://api-for-music-rec.pratyushpatnai2.repl.co/?name=${e.target.value}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const result = Object.values(data);
+        console.log(result);
+        setData(result);
+      })
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }
+}
+
+
+
+  
 
   const titleRef = useRef();
   if (loading) {
